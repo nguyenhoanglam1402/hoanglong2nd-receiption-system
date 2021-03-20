@@ -89,7 +89,7 @@
               KHÁCH HÀNG ĐÃ CHỐT ĐƠN
             </h1>
             <div class="split-line"></div>
-            <ul>
+            <ul class="listCustomer">
             <?php
               $query = "select customer_name, phone_number, 
               expected_delivery_date, title, 
@@ -99,11 +99,10 @@
               order by cus_id desc limit 2";
               $resultOfListCustomer = pg_query($connect, $query);
               while ($row = pg_fetch_assoc($resultOfListCustomer)) {
-                echo '<li class="customer-item"> Tên khách hàng'.$row['customer_name'].
-                ' - Dịch vụ ['.$row['title'].'] - Số tiền đặt trước : '.$row['deposit'].' VND</li>';
+                echo '<li class="customer-item"> Khách hàng:'.$row['customer_name'].
+                '</br>Dịch vụ ['.$row['title'].']</br>Số tiền đặt trước: '.$row['deposit'].' VND</li>';
               }
             ?>
-            
             </ul>
           </div>
           <div class="trending-list shadow-sm bg-white">

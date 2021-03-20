@@ -76,6 +76,10 @@ h1{
     margin-top: 2%;
 }
 
+.listCustomer{
+    padding-inline-start: 0;
+}
+
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;
