@@ -99,8 +99,16 @@
               order by cus_id desc limit 2";
               $resultOfListCustomer = pg_query($connect, $query);
               while ($row = pg_fetch_assoc($resultOfListCustomer)) {
-                echo '<li class="customer-item"> Khách hàng:'.$row['customer_name'].
-                '</br>Dịch vụ ['.$row['title'].']</br>Số tiền đặt trước: '.$row['deposit'].' VND</li>';
+                echo '<li class="customer-item">
+                    <div class="customer-item-card shadow-sm">
+                      <div class="title">
+                        <span class="customer-name-tag">'.$row['customer_name'].'</span>
+                        <span class="due-tag">Ngày giao hàng: '.$row['expected_delivery_date'].'</span>
+                      </div>
+                      <p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'.$row['title'].'</span></p>
+                      <p class="customer-description">Số tiền đặt cọc: <b>'.$row['deposit'].' VNĐ</b></p>
+                    </div>
+                  </li>';
               }
             ?>
             </ul>
