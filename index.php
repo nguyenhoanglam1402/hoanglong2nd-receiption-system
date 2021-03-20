@@ -96,7 +96,7 @@
               description, deposit, rest_amount 
               from receiption_product_service 
               inner join customer on cid=cus_id
-              order by cus_id desc limit 10";
+              order by cus_id desc limit 5";
               $resultOfListCustomer = pg_query($connect, $query);
               while ($row = pg_fetch_assoc($resultOfListCustomer)) {
                 echo '<li class="customer-item">
