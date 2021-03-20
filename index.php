@@ -26,7 +26,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Quản lý chung</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -90,7 +90,20 @@
             </h1>
             <div class="split-line"></div>
             <ul>
-              <li class="customer-item">No one here !</li>
+            <?php
+              $query = "select customer_name, phone_number, 
+              expected_delivery_date, title, 
+              description, deposit, rest_amount 
+              from receiption_product_service 
+              inner join customer on cid=cus_id
+              order by cus_id desc limit 2";
+              $resultOfListCustomer = pg_query($connect, $query);
+              while ($row = pg_fetch_assoc($resultOfListCustomer)) {
+                echo '<li class="customer-item"> Tên khách hàng'.$row['customer_name'].
+                ' - Dịch vụ ['.$row['title'].'] - Số tiền đặt trước : '.$row['deposit'].' VND</li>';
+              }
+            ?>
+            
             </ul>
           </div>
           <div class="trending-list shadow-sm bg-white">
