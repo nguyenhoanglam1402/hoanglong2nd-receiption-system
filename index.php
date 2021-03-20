@@ -111,7 +111,7 @@
                     </li>';
                 }
               }catch(Exception $ex){
-                echo '<script>alert("Lỗi :'.$ex->getMessage().'. Vui lòng liên hệ đến tác giả để khắc phục !")</script>';
+                echo '<script>alert("Lỗi :', $ex->getMessage() ,'. Vui lòng liên hệ đến tác giả để khắc phục !");</script>';
               }
             ?>
             </ul>
