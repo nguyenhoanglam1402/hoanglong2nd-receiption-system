@@ -104,7 +104,7 @@
                       <div class="customer-item-card shadow-sm">
                         <div class="title">
                           <span class="customer-name-tag">'.$row['customer_name'].'</span>
-                          <span class="due-tag">Ngày giao hàng: <span class="date">'.$row['expected_delivery_date'].'</span></span>
+                          <span class="due-tag">Ngày giao: <span class="date">'.$row['expected_delivery_date'].'</span></span>
                         </div>
                         <p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'.$row['title'].'</span></p>
                         <p class="customer-description">Số tiền đặt cọc: <b>'.$row['deposit'].' VNĐ</b></p>
