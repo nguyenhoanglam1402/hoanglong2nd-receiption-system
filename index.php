@@ -1,3 +1,4 @@
+<?php require './server-side/connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,10 +14,7 @@
   <body>
     <div class="navbar-session">
       <!--This is Navbar session-->
-    </div>
-    <div class="view-session">
-      <!--This is view session-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between shadow-sm mb-5 bg-white rounded">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between shadow-sm mb-3 bg-white rounded">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/image_for_page/bootstrap-logo.svg" alt="" width="50" height="40">
@@ -28,7 +26,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Quản lý chung</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -62,26 +60,54 @@
         </canvas>
       </div>
       <div class="detail-block" id="detail-block">
-        <div class="recommend-block shadow-sm bg-white">
-          <h1>
-            NHẬN ĐỊNH TỔNG QUAN
-          </h1>
-          <div class="split-line"></div>
-          <ul>
-            <li class="list-detail"><a class="link-detail" href="#">Lượng khách hình phòng tăng mạnh (10%)</a></li>
-            <li class="list-detail"><a class="link-detail" href="#">Lượng khách hình thẻ giảm nhẹ (-5%)</a></li>
-            <li class="list-detail"><a class="link-detail" href="#">Lượng khách thuê đồ cưới tăng nhẹ (2%)</a></li>
-            <li class="list-detail"><a class="link-detail" href="#">Lượng khách mâm quả giảm sâu (-15%)</a></li>
-          </ul>
+        <div class="column">
+          <div class="recommend-block shadow-sm bg-white">
+            <h1>
+              NHẬN ĐỊNH TỔNG QUAN
+            </h1>
+            <div class="split-line"></div>
+            <ul>
+              <li class="list-detail"><a class="link-detail" id="studio-index" href="#">Lượng khách hình phòng tăng mạnh <b>(10%)</b></a></li>
+              <li class="list-detail"><a class="link-detail" id="personal-picture-index" href="#">Lượng khách hình thẻ giảm nhẹ <b>(-5%)</b></a></li>
+              <li class="list-detail"><a class="link-detail" id="dress-index" href="#">Lượng khách thuê đồ cưới tăng nhẹ <b>(2%)</b></a></li>
+              <li class="list-detail"><a class="link-detail" id="product-index" href="#">Lượng khách mâm quả giảm sâu <b>(-15%)</b></a></li>
+            </ul>
+          </div>
+          <div class="revenue-list shadow-sm bg-white">
+            <h1>
+              TỔNG DOANH THU
+            </h1>
+            <div class="split-line"></div>
+            <ul>
+              <li class="customer-item">Không có dữ liệu !</li>
+            </ul>
+          </div>
         </div>
-        <div class="customer-list">
-          <h1>
-            KHÁCH HÀNG ĐÃ CHỐT ĐƠN
-          </h1>
-          <div class="split-line"></div>
+        <div class="column">
+          <div class="customer-list shadow-sm bg-white">
+            <h1>
+              KHÁCH HÀNG ĐÃ CHỐT ĐƠN
+            </h1>
+            <div class="split-line"></div>
+            <ul>
+              <li class="customer-item">No one here !</li>
+            </ul>
+          </div>
+          <div class="trending-list shadow-sm bg-white">
+            <h1>
+              XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
+            </h1>
+            <div class="split-line"></div>
+            <ul>
+              <li class="customer-item">Nothing here !</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <footer>
+      
+    </footer>
     <script src="./js/main_page.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

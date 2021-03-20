@@ -41,7 +41,7 @@ body{
     background-color: #ffffff;
 }
 
-.customer-list{
+.customer-list,.revenue-list,.trending-list{
     display: inline-block;
     border-radius: 10px;
     padding:1.5%;
@@ -70,20 +70,30 @@ h1{
     margin: auto;
 }
 
+.customer-item{
+    list-style: none;
+    text-align: center;
+    margin-top: 2%;
+}
+
 @media(min-width:800px){
     .chart-view-block{
-        margin: auto;
+        margin: 5px auto;
         height: 15%;
+    }
+    .column{
+        flex: 50%;
+        padding: 0 4px;
     }
     .recommend-block{
-        margin-top: 10px;
-        height: 15%;
-        width: 45%;
+        height: fit-content;
+        width: 100%;
+        margin: 5px 0px;
     }
-    .customer-list{
-        margin-top: 10px;
-        height: 15%;
-        width: 53%;
+    .customer-list,.revenue-list,.trending-list{
+        height: fit-content;
+        width: 100%;
+        margin: 5px 0px;
     }
     #detail-block{
         display: flex;
@@ -92,17 +102,20 @@ h1{
 }
 @media(max-width:800px){
     .chart-view-block{
-        margin: auto;
+        margin: 5px auto;
         height: 55%;
+    }
+    .column{
+        flex: 100%;
     }
     .recommend-block{
-        margin: 10px auto;
-        height: 55%;
+        margin: 5px auto;
+        height: fit-content;
         width: 100%;
     }
-    .customer-list{
-        margin: 10px auto;
-        height: 55%;
+    .customer-list,.revenue-list,.trending-list{
+        margin: 5px auto;
+        height: fit-content;
         width: 100%;
     }
     #detail-block{
