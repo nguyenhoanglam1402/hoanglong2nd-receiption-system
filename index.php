@@ -86,7 +86,7 @@
         <div class="column">
           <div class="customer-list shadow-sm bg-white">
             <h1>
-              KHÁCH HÀNG ĐÃ CHỐT ĐƠN
+              KHÁCH HÀNG ĐANG ĐỢI
             </h1>
             <div class="split-line"></div>
             <ul class="listCustomer">
@@ -96,19 +96,22 @@
               description, deposit, rest_amount 
               from receiption_product_service 
               inner join customer on cid=cus_id
-              order by cus_id desc limit 5";
-              $resultOfListCustomer = pg_query($connect, $query);
-              while ($row = pg_fetch_assoc($resultOfListCustomer)) {
-                echo '<li class="customer-item">
-                    <div class="customer-item-card shadow-sm">
-                      <div class="title">
-                        <span class="customer-name-tag">'.$row['customer_name'].'</span>
-                        <span class="due-tag">Ngày giao hàng: '.$row['expected_delivery_date'].'</span>
+              order by expected_delivery_date asc limit 5";
+              try{
+                while ($row = pg_fetch_assoc($resultOfListCustomer)) {
+                  echo '<li class="customer-item">
+                      <div class="customer-item-card shadow-sm">
+                        <div class="title">
+                          <span class="customer-name-tag">'.$row['customer_name'].'</span>
+                          <span class="due-tag">Ngày giao hàng: <span class="date">'.$row['expected_delivery_date'].'</span></span>
+                        </div>
+                        <p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'.$row['title'].'</span></p>
+                        <p class="customer-description">Số tiền đặt cọc: <b>'.$row['deposit'].' VNĐ</b></p>
                       </div>
-                      <p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'.$row['title'].'</span></p>
-                      <p class="customer-description">Số tiền đặt cọc: <b>'.$row['deposit'].' VNĐ</b></p>
-                    </div>
-                  </li>';
+                    </li>';
+                }
+              }catch(Exception $ex){
+                echo '<script>alert("Lỗi :'.$ex->getMessage().'. Vui lòng liên hệ đến tác giả để khắc phục !")</script>';
               }
             ?>
             </ul>
