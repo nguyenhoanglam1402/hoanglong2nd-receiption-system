@@ -98,6 +98,7 @@
               inner join customer on cid=cus_id
               order by expected_delivery_date asc limit 5";
               try{
+                $resultOfListCustomer = pg_query($connect, $query);
                 while ($row = pg_fetch_assoc($resultOfListCustomer)) {
                   echo '<li class="customer-item">
                       <div class="customer-item-card shadow-sm">
