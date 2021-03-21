@@ -10,9 +10,9 @@ function setStatusOfCustomerCard(){
 
 function calculateDifferentDay(dateEnd){
     var currentDate = new Date();
-    var dateTime = currentDate.getFullYear+'-'+
-                    currentDate.getMonth+'-'+
-                    currentDate.getDate;
+    var dateTime = currentDate.getFullYear()+'-'+
+                    (currentDate.getMonth() + 1) +'-'+
+                    currentDate.getDate();
     var currentTime = new Date(dateTime);
     var dueDay = new Date(dateEnd);
     var time_difference = dueDay.getTime() - currentTime.getTime();  
