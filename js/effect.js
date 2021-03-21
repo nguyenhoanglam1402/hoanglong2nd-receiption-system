@@ -19,3 +19,5 @@ function calculateDifferentDay(dateEnd){
     var days_difference = time_difference / (1000 * 60 * 60 * 24);  
     return days_difference;
 }
+
+document.addEventListener("DOMContentLoaded", setStatusOfCustomerCard);
