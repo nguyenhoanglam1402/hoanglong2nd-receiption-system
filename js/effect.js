@@ -2,8 +2,15 @@ function setStatusOfCustomerCard(){
     var customerItem = document.getElementsByClassName('customer-item-card');
     var dueDay = document.getElementsByClassName('date');
     for(var index = 0; index < customerItem.length; index++){
-        if(calculateDifferentDay(dueDay[index].innerHTML) <=5){
+        var remainingDate = calculateDifferentDay(dueDay[index].innerHTML);
+        if( remainingDate >= 3 && remainingDate <=7){
             customerItem[index].style.backgroundColor = '#fc891275';
+        }
+        else if(remainingDate <= 0){
+            customerItem[index].style.backgroundColor = '#fc1d1275';
+        }
+        else{
+            customerItem[index].style.backgroundColor = '#1275fc75';
         }
     }
 }
