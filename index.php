@@ -82,6 +82,15 @@
               <li class="customer-item">Không có dữ liệu !</li>
             </ul>
           </div>
+          <div class="trending-list shadow-sm bg-white">
+            <h1>
+              XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
+            </h1>
+            <div class="split-line"></div>
+            <ul>
+              <li class="customer-item">Nothing here !</li>
+            </ul>
+          </div>
         </div>
         <div class="column">
           <div class="customer-list shadow-sm bg-white">
@@ -115,15 +124,6 @@
                 echo '<script>alert("Lỗi :', $ex->getMessage() ,'. Vui lòng liên hệ đến tác giả để khắc phục !");</script>';
               }
             ?>
-            </ul>
-          </div>
-          <div class="trending-list shadow-sm bg-white">
-            <h1>
-              XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
-            </h1>
-            <div class="split-line"></div>
-            <ul>
-              <li class="customer-item">Nothing here !</li>
             </ul>
           </div>
         </div>
