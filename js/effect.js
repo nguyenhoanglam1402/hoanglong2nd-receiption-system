@@ -6,7 +6,7 @@ function setStatusOfCustomerCard(){
         if( remainingDate >= 3 && remainingDate <=7){
             customerItem[index].style.backgroundColor = '#fc891275';
         }
-        else if(remainingDate <= 0){
+        else if(remainingDate < 3){
             customerItem[index].style.backgroundColor = '#fc1d1275';
         }
         else{
