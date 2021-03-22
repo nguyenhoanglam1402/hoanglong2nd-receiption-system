@@ -83,6 +83,11 @@ h1{
     padding: 5px 4px;
     border-radius: 10px;
 }
+
+.customer-item-card:hover{
+    cursor: pointer;
+}
+
 .listCustomer{
     padding-inline-start: 0;
 }
