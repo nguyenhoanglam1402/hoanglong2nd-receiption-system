@@ -3,7 +3,7 @@ function setStatusOfCustomerCard(){
     var dueDay = document.getElementsByClassName('date');
     for(var index = 0; index < customerItem.length; index++){
         var remainingDate = calculateDifferentDay(dueDay[index].innerHTML);
-        if( remainingDate >= 3 && remainingDate <=7){
+        if( remainingDate >= 2 && remainingDate <=7){
             customerItem[index].style.backgroundColor = '#fc891275';
         }
         else if(remainingDate < 2){
