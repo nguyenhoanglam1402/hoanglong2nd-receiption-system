@@ -29,15 +29,9 @@
                     <a class="nav-link" aria-current="page" href="index.php">Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <a class="nav-link" href="createForm.html" aria-current="page">
                       Tạo biên lai
                     </a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Cho thuê áo cưới (Cô dâu / Chú rể)</a>
-                      <a class="dropdown-item" href="#">Thanh toán ảnh thẻ</a>
-                      <a class="dropdown-item" href="#">Đặt cọc làm mâm ngũ quả</a>
-                      <a class="dropdown-item" href="#">Đặt cọc ảnh hình phòng (Ảnh Studio)</a>
-                    </div>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Quản lý biên lai</a>
