@@ -11,17 +11,17 @@
   </head>
   <body>
     <div class="container">
-        <div class="form-recieption">
+        <div class="form-recieption shadow-sm">
             <form action="" method="post">
                 <h1 class="form-receiption-label">TẠO BIÊN LAI</h1>
                 <div class="form-group">
                   <label for="">Tên khách hàng</label>
-                  <input type="text" class="form-control" name="" id="customer-name-input" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
+                  <input type="text" class="form-control shadow-sm" name="" id="customer-name-input" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
                   <small id="helpId" class="form-text text-muted">Tên khách hàng dùng để định danh khách hàng và tuyệt đối không được bỏ trống</small>
                 </div>
                 <div class="form-group">
                   <label for="">Loại hình dịch vụ</label>
-                  <select class="form-control" name="" id="type-service-selector">
+                  <select class="form-control shadow-sm" name="" id="type-service-selector">
                     <option value="Áo cưới (Cô dâu / Chú rể)">Cho thuê áo cưới/ trang phục đi họ</option>
                     <option value="Ảnh cưới">Chụp ảnh cưới</option>
                     <option value="Ảnh Studio (Hình phòng)">Chụp ảnh hình phòng (Ảnh Studio)</option>
@@ -30,29 +30,29 @@
                 </div>
                 <div class="form-group">
                   <label for="">Chi tiết biên lai</label>
-                  <textarea class="form-control" name="" id="description-input" rows="3" placeholder="Chi tiết thêm"></textarea>
+                  <textarea class="form-control shadow-sm" name="" id="description-input" rows="3" placeholder="Chi tiết thêm"></textarea>
                   <small id="helpId" class="form-text text-muted">Mô tả chi tiết về yêu cầu của khách hàng</small>
                 </div>
                 <div class="form-group">
                     <label for="">Thành tiền (VND)</label>
-                    <input class="form-control" type="number" name="total-price" id="" placeholder="Tổng tiền ( ví dụ : 300000)">
+                    <input class="form-control shadow-sm" type="number" name="total-price" id="total-money-input" placeholder="Tổng tiền ( ví dụ : 300000)">
                 </div>
                 <div class="form-group">
                     <label for="">Đặt cọc (VND)</label>
-                    <input class="form-control" type="number" name="price" id="price-input" value="" placeholder="Số tiền đã đặt cọc ( ví dụ: 100.000)">
+                    <input class="form-control shadow-sm" type="number" name="price" id="deposit-input" value="" placeholder="Số tiền đã đặt cọc ( ví dụ: 100.000)">
                     <small id="helpId" class="form-text text-muted">Số tiền đặt cọc trước của khách hàng không nên bỏ trống</small>
                 </div>
                 <div class="form-group">
                     <label for="">Ngày hẹn dự kiến</label>
-                    <input class="form-control" type="date" name="" id="" >
+                    <input class="form-control shadow-sm" type="date" name="" id="datetime-input" >
                 </div>
                 <div class="form-group">
                   <label for="">Số điện thoại khách hàng</label>
-                  <input class="form-control" type="number" name="phone-number" id="phone-number" value="" placeholder="Nhập số điện thoại (ví dụ: 0935145948)">
+                  <input class="form-control shadow-sm" type="number" name="phone-number" id="phonenumber" value="" placeholder="Nhập số điện thoại (ví dụ: 0935145948)">
                 </div>
                 <div class="form-group" id="button-form-group">
-                    <button type="button" class="btn btn-primary button" onclick="sendReceiption()">Gửi biên lai</button>
-                    <button type="button" class="btn btn-danger button" onclick="cancel()">Hủy biên lai</button>
+                    <button type="button" class="btn btn-primary button shadow-sm" onclick="sendReceiption()">Gửi biên lai</button>
+                    <button type="button" class="btn btn-danger button shadow-sm" onclick="cancel()">Hủy biên lai</button>
                 </div>
             </form>
         </div>
