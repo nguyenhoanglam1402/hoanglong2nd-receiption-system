@@ -16,12 +16,12 @@
                 <h1 class="form-receiption-label">TẠO BIÊN LAI</h1>
                 <div class="form-group">
                   <label for="">Tên khách hàng</label>
-                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
+                  <input type="text" class="form-control" name="" id="customer-name-input" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
                   <small id="helpId" class="form-text text-muted">Tên khách hàng dùng để định danh khách hàng và tuyệt đối không được bỏ trống</small>
                 </div>
                 <div class="form-group">
                   <label for="">Loại hình dịch vụ</label>
-                  <select class="form-control" name="" id="">
+                  <select class="form-control" name="" id="type-service-selector">
                     <option value="Áo cưới (Cô dâu / Chú rể)">Cho thuê áo cưới/ trang phục đi họ</option>
                     <option value="Ảnh cưới">Chụp ảnh cưới</option>
                     <option value="Ảnh Studio (Hình phòng)">Chụp ảnh hình phòng (Ảnh Studio)</option>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                   <label for="">Chi tiết biên lai</label>
-                  <textarea class="form-control" name="" id="" rows="3" placeholder="Chi tiết thêm"></textarea>
+                  <textarea class="form-control" name="" id="description-input" rows="3" placeholder="Chi tiết thêm"></textarea>
                   <small id="helpId" class="form-text text-muted">Mô tả chi tiết về yêu cầu của khách hàng</small>
                 </div>
                 <div class="form-group">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group" id="button-form-group">
                     <button type="button" class="btn btn-primary button">Gửi biên lai</button>
-                    <button type="button" class="btn btn-danger button">Hủy biên lai</button>
+                    <button type="button" class="btn btn-danger button" onclick="">Hủy biên lai</button>
                 </div>
             </form>
         </div>
