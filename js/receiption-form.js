@@ -8,7 +8,7 @@ var phoneNumber = document.getElementById('phonenumber').value;
 
 
 function cancel(){
-    location.href('../createForm.html');
+    window.location.href = '/index.php';
 }
 
 function sendReceiption(){
