@@ -1,6 +1,7 @@
 .container{
     display: flex;
     justify-content: center;
+    background-color: #f0f1f3;
 }
 
 @media(min-width:800px){
@@ -18,7 +19,7 @@
         justify-content: space-around;
     }
 
-    .button{
+    button{
         display: block;
         flex: 50%;
         margin: 0 1%;
