@@ -1,10 +1,6 @@
 body{
     background-color: #f0f1f3;
     background-image: url("../images/image_for_page/icons-hero.png");
-    background-attachment: local;
-    background-repeat: no-repeat;
-    background-position-x: 85%;
-    background-position-y: 25%;
 }
 
 h1{
@@ -16,7 +12,6 @@ h1{
 .container{
     display: flex;
     justify-content: center;
-    
 }
 
 .form-group{
@@ -32,6 +27,14 @@ h1{
         border: 1px solid rgb(0 0 0 / 9%);
         width:50%;
     }
+
+    body{
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-position-x: 85%;
+        background-position-y: 25%;
+    }
+    
 
     #button-form-group{
         display: flex;
@@ -57,6 +60,10 @@ h1{
         background-repeat: no-repeat;
         background-position-x: -200%;
         background-position-y: -32%;
+    }
+
+    body{
+        background-image: none;
     }
 
     #button-form-group{
