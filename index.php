@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="./images/image_for_page/bootstrap-logo.svg" type="image/svg" size="96x96">
+    <link rel="shortcut icon" href="./images/image_for_page/bootstrap-logo.svg" type="image/svg" sizes="96x96">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" >
   </head>
@@ -60,7 +60,7 @@
             <h1>
               NHẬN ĐỊNH TỔNG QUAN
             </h1>
-            <div class="split-line"></div>
+            <div class="split-line shadow-sm"></div>
             <ul>
               <li class="list-detail"><a class="link-detail" id="studio-index" href="#">Lượng khách hình phòng tăng mạnh <b>(10%)</b></a></li>
               <li class="list-detail"><a class="link-detail" id="personal-picture-index" href="#">Lượng khách hình thẻ giảm nhẹ <b>(-5%)</b></a></li>
@@ -72,7 +72,7 @@
             <h1>
               TỔNG DOANH THU
             </h1>
-            <div class="split-line"></div>
+            <div class="split-line shadow-sm"></div>
             <ul>
               <li class="customer-item">Không có dữ liệu !</li>
             </ul>
@@ -81,7 +81,7 @@
             <h1>
               XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
             </h1>
-            <div class="split-line"></div>
+            <div class="split-line shadow-sm"></div>
             <ul>
               <li class="customer-item">Nothing here !</li>
             </ul>
@@ -92,7 +92,7 @@
             <h1>
               KHÁCH HÀNG ĐANG ĐỢI
             </h1>
-            <div class="split-line"></div>
+            <div class="split-line shadow-sm"></div>
             <ul class="listCustomer">
             <?php
               $query = "select customer_name, phone_number, 
