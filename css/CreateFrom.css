@@ -31,8 +31,9 @@ h1{
     body{
         background-attachment: local;
         background-repeat: no-repeat;
-        background-position-x: 85%;
-        background-position-y: 25%;
+        background-position-x: -140%;
+        background-position-y: -28%;
+        background-size: 26rem;
     }
     
 
