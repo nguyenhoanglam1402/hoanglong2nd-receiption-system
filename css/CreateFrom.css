@@ -1,7 +1,17 @@
+body{
+    background-color: #f0f1f3;
+}
+
+h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 .container{
     display: flex;
     justify-content: center;
-    background-color: #f0f1f3;
+    
 }
 
 @media(min-width:800px){
