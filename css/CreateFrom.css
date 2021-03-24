@@ -18,7 +18,7 @@
         justify-content: space-around;
     }
 
-    .btn{
+    .button{
         display: block;
         flex: 50%;
         margin: 0 1%;
@@ -38,7 +38,7 @@
         display: block;
     }
 
-    .btn{
+    .button{
         display: block;
         margin-bottom: 3%;
         width: 100%;
