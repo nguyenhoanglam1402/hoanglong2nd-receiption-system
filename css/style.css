@@ -157,11 +157,6 @@ h1{
         flex: 50%;
         margin: 0 1%;
     }
-
-    .container{
-        display:block;
-        
-    }
     
     .column{
         flex: 50%;
