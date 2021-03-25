@@ -3,6 +3,10 @@ body{
     background-image: url("../images/image_for_page/icons-hero.png");
 }
 
+.customer-item{
+    padding-inline-start: 0;
+}
+
 h1{
     font-size: 1.6rem;
     font-weight: 600;

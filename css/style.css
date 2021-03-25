@@ -38,22 +38,21 @@ body{
 .recommend-block{
     display: inline-block;
     border-radius: 10px;
-    padding:1.5%;
     background-color: #ffffff;
 }
 
 .customer-list,.revenue-list,.trending-list{
     display: inline-block;
     border-radius: 10px;
-    padding:1.5%;
     background-color: #ffffff;
 }
 
 h1{
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: 600;
-    color:#630cb4;;
+    padding: 5px 0px;
+    color:#fdfdfd;;
 }
 
 .form-receiption-label {
@@ -69,7 +68,7 @@ h1{
 }
 
 .list-detail {
-    margin-top:3%;
+    margin:3% 2%;
 }
 
 .split-line {
@@ -85,12 +84,28 @@ h1{
     margin-top: 2%;
 }
 
+.customer-item{
+    padding-inline-start: 0;
+}
+
+.non-list-type{
+    padding-inline-start: 0;
+}
+
+.generated-evaluation{
+    background-color: linear-gradient(to bottom right, #3358fd 2%, #0f45f5 100%);
+}
+
+.waited-customer{
+    background-color: linear-gradient(to bottom right, #3358fd 2%, #0f45f5 100%);
+}
+
 .customer-item-card {
     height: fit-content;
     background-color: #ffffff;
-    margin: 5px;
     padding: 5px 4px;
     border-radius: 10px;
+    margin: 5px 10px;
 }
 
 .customer-item-card:hover {
@@ -130,6 +145,15 @@ h1{
     justify-content:space-between;
 }
 
+.title-bar{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 28px;
+}
+
+.revenue-bar {
+    background: linear-gradient(to bottom right, #9d33fd 2%, #6a0ff5 100%);
+}
 
 .listCustomer{
     padding-inline-start: 0;
