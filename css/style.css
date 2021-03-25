@@ -78,7 +78,7 @@ h1{
     margin: auto;
 }
 
-.customer-item {
+.customer-item,.trending-list-item {
     list-style: none;
     text-align: center;
     margin-top: 2%;

@@ -57,7 +57,7 @@
       <div class="detail-block" id="detail-block">
         <div class="column">
           <div class="recommend-block shadow-sm bg-white">
-            <div class="title-bar shadow-sm generated-evaluation">
+            <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 NHẬN ĐỊNH TỔNG QUAN
               </h1>
@@ -86,13 +86,13 @@
               </h1>
             </div>
             <ul class="non-list-type">
-              <li>Nothing here !</li>
+              <li class = "trending-list-item">Nothing here !</li>
             </ul>
           </div>
         </div>
         <div class="column">
           <div class="customer-list shadow-sm bg-white">
-            <div class="title-bar shadow-sm waited-customer">
+            <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 KHÁCH HÀNG ĐANG ĐỢI
               </h1>
