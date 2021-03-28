@@ -11,11 +11,23 @@ function cancel(){
     window.location.href = '/index.php';
 }
 
+function checkExistedUser(){
+    var isExistUser = true;
+    var customer = customerName;
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST", "/server-side/")
+    return isExistUser;
+}
+
 function sendReceiption(){
     if(isValidated){
+        var formData = new FormData(this);
+        formData.append(CustomerName, customerName);
+        formData.append(Type,typeOfService);
         var xhtml = new XMLHttpRequest();
-        xhtml.open("POST", "../server-side/submit_receiption.php", true);
-        xhtml.send();
+        xhtml.open("POST", "/server-side/checkAvailableUser", true);
+        xhtml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhtml.send(formData);
     }
 }
 
