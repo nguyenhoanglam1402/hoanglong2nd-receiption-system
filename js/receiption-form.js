@@ -8,7 +8,7 @@ var phoneNumber = document.getElementById('phonenumber').value;
 
 
 function cancel(){
-    window.location.href = '/index.php';
+    location.href='/index.php';
 }
 
 function checkExistedUser(){
