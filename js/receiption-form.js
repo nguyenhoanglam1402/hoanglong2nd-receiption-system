@@ -20,7 +20,7 @@ function checkExistedUser(){
 }
 
 function sendReceiption(){
-    if(isValidated){
+    if(true){
         var formData = new FormData(this);
         formData.append(CustomerName, customerName);
         formData.append(Type,typeOfService);
