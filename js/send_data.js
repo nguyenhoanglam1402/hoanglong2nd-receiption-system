@@ -9,13 +9,13 @@ $(document).ready(function () {
     var phoneNumber;
     
     $('#send-button').click(function (e) { 
-        customerName = $('customer-name-input').val();
-        typeOfService = $('type-service-selector').val();
-        description = $('description-input').val();
-        totalMoney = $('total-money-input').val();
-        deposit = $('deposit-input').val();
-        dateTime = $('datetime-input').val();
-        phoneNumber = $('phonenumber').val();
+        customerName = $('#customer-name-input').val();
+        typeOfService = $('#type-service-selector').val();
+        description = $('#description-input').val();
+        totalMoney = $('#total-money-input').val();
+        deposit = $('#deposit-input').val();
+        dateTime = $('#datetime-input').val();
+        phoneNumber = $('#phonenumber').val();
         if(checkValidated()){
             $.ajax({
                 type: "POST",
