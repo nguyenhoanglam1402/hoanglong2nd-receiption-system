@@ -29,7 +29,6 @@ $(document).ready(function () {
                     date: dateTime,
                     phone: phoneNumber
                 },
-                dataType: "dataType",
                 success: function (response) {
                     alert(response);
                 }
