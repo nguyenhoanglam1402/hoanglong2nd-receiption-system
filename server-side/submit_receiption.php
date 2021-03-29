@@ -19,7 +19,7 @@ while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         $requestSubmitQuery = "INSERT INTO receiption_product_service 
         (cid, title, description, expected_delivery_date, created_date, deposit, rest_amount, is_done)
         VALUES(".$resultOfRows['cus_id'].", $type, $descr, $date, $creatDate, $depos, $last, false)";
-        pg_query($connect, $requestSubmitQuery);
+        $resultOfCreationQuery = pg_query($connect, $requestSubmitQuery);
         echo 'Hóa đơn đã được đưa đi xử lý !';
     }
     else{
