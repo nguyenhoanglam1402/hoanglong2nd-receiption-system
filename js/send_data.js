@@ -31,7 +31,7 @@ $(document).ready(function () {
                 },
                 dataType: "dataType",
                 success: function (response) {
-                    alert('Done !');
+                    alert(response);
                 }
             });
         }
