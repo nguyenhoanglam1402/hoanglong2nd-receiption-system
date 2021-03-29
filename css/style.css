@@ -194,6 +194,10 @@ i{
 }
 @media(max-width:800px){
 
+    .btn{
+        width: 100%;
+    }
+
     .chart-view-block{
         margin: 5px auto;
         height: 55%;
