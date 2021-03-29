@@ -16,19 +16,13 @@ $resultCheckingQuery = pg_query($connect, $checkingQuery);
 while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
     if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
         //submit to database
-        submitReceiption();
+        $requestSubmitQuery = "INSERT INTO receiption_product_service 
+        (cid, title, description, expected_delivery_date, created_date, deposit, rest_amount, is_done)
+        VALUES(".$resultOfRows['cus_id'].", $type, $descr, $date, $creatDate, $depos, $last, false)";
+        pg_query($connect, $requestSubmitQuery);
+        echo 'Hóa đơn đã được đưa đi xử lý !';
     }
     else{
 
     }
-}
-
-function submitReceiption(){
-    $requestSubmitQuery = "INSERT INTO receiption_product_service 
-    (cid, title, description, expected_delivery_date, created_date, deposit, rest_amount, is_done)
-    VALUES(".$resultOfRows['cus_id'].", $type, $descr, $date, $creatDate, $depos, $last, false)";
-    pg_query($connect, $requestSubmitQuery);
-    echo 'Hóa đơn đã được đưa đi xử lý !';
-}
-
-?>
+}?>
