@@ -27,6 +27,7 @@ $(document).ready(function () {
                     last: (totalMoney - deposit),
                     depos: deposit,
                     date: dateTime,
+                    credate: getCreatedDate(),
                     phone: phoneNumber
                 },
                 success: function (response) {
@@ -62,5 +63,11 @@ $(document).ready(function () {
             isValidated = true;
         }
         return isValidated;
+    }
+
+    function getCreatedDate(){
+        var dateTime = new Date();
+        var createdDate = dateTime.getFullYear()+'-'+(dateTime.getMonth() + 1)+'-'+dateTime.getDate();
+        return createdDate;
     }
 });
