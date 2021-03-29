@@ -15,7 +15,7 @@ $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = $name AND ph
 $resultCheckingQuery = pg_query($connect, $query); 
 $resultOfRows = pg_fetch_row($resultCheckingQuery);
 $cusId = $resultOfRows[0];
-echo"alert($cusId)";
+echo'alert("'.$cusId.'")';
 //query 
 //check 
 ?>
