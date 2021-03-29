@@ -14,7 +14,7 @@ $createdDate = date('Y/m/d');
 $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
 $resultCheckingQuery = pg_query($connect, $checkingQuery);
 while($resultOfRows = pg_fetch_row($resultCheckingQuery)){
-    echo 'console.log("'.$resultOfRows[0].'");';
+    echo '<script>console.log("'.$resultOfRows[0].'");</script>';
 }
 //$cusId = $resultOfRows[0];
 //query 
