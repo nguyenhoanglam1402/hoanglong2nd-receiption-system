@@ -1,7 +1,9 @@
 body{
-    background-image: url('/images/image_for_page/pexels-karolina-grabowska-4397899.jpg');
+    background-image: url(/images/image_for_page/pexels-karolina-grabowska-4397899.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+
 }
 
 .navbar-brand{
