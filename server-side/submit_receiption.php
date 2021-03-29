@@ -10,7 +10,6 @@ $last = $_POST['last'];
 $depos = $_POST['depos'];
 $date = $_POST['date'];
 $phone = $_POST['phone'];
-$createdDate = date('Y/m/d');
 die("I'm here");
 echo "<script>alert('$name');</script>";
 //check exist customer via their name and phone number
