@@ -1,5 +1,7 @@
 body{
-    background-color: #ebebeb;
+    background-image: url('/images/image_for_page/pexels-karolina-grabowska-4397899.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .navbar-brand{
