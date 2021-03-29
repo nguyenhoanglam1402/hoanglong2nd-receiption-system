@@ -13,6 +13,6 @@ $phone = $_POST['phone'];
 $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
 $resultCheckingQuery = pg_query($connect, $checkingQuery);
 while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
-    echo "<script>alert(".$resultOfRows['cus_id'].");</script>";
+    echo "<script>alert('".$resultOfRows['cus_id']."');</script>";
 }
 ?>
