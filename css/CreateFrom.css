@@ -1,11 +1,11 @@
 body{
     background-color: #f0f1f3;
-    background-image: url("../images/image_for_page/icons-hero.png");
+    background-image: url("../images/image_for_page/19007.jpg");
+    background-size: cover;
+    backdrop-filter: brightness(0.95);
+    background-repeat: no-repeat;
 }
 
-.customer-item{
-    padding-inline-start: 0;
-}
 
 h1{
     font-size: 1.6rem;
