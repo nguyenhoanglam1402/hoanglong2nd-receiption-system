@@ -31,7 +31,7 @@ $(document).ready(function () {
                     phone: phoneNumber
                 },
                 success: function (response) {
-                    alert("Thông báo",response);
+                    
                 }
             });
         }
