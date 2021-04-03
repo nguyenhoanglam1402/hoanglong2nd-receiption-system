@@ -52,12 +52,11 @@ while($dataRow = pg_fetch_assoc($result)) {
         $dataRow["expected_delivery_date"],
         $dataRow["title"],
         $dataRow["deposit"],
-        $dataRow["status"],
+        $dataRow["status"]
     );
-
-   // array_push($listReceiptions, $recieption);
+   array_push($listReceiptions, $recieption);
 }
-pg_close($connect);
+
 echo json_encode($listReceiptions);
 
 ?>
