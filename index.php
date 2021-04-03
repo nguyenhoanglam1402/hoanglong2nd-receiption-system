@@ -100,31 +100,6 @@
               </h1>
             </div>
             <ul class="listCustomer">
-            <?php
-              $query = "select customer_name, phone_number, 
-              expected_delivery_date, title, 
-              description, deposit, rest_amount 
-              from receiption_product_service 
-              inner join customer on cid=cus_id
-              order by expected_delivery_date asc limit 5";
-              try{
-                $resultOfListCustomer = pg_query($connect, $query);
-                while ($row = pg_fetch_assoc($resultOfListCustomer)) {
-                  echo '<li class="customer-item">
-                      <div class="customer-item-card shadow-sm">
-                        <div class="title">
-                          <span class="customer-name-tag">'.$row['customer_name'].'</span>
-                          <span class="due-tag">Ngày hẹn: <span class="date">'.$row['expected_delivery_date'].'</span></span>
-                        </div>
-                        <p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'.$row['title'].'</span></p>
-                        <p class="customer-description">Số tiền đặt cọc: <b>'.$row['deposit'].' VNĐ</b></p>
-                      </div>
-                    </li>';
-                }
-              }catch(Exception $ex){
-                echo '<script>alert("Lỗi :', $ex->getMessage() ,'. Vui lòng liên hệ đến tác giả để khắc phục !");</script>';
-              }
-            ?>
             </ul>
           </div>
         </div>
