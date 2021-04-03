@@ -47,13 +47,7 @@ $result = pg_query($connect, $query);
 
 
 while($dataRow = pg_fetch_assoc($result)) {
-    $recieption = new __Receiption(
-        $dataRow["customer_name"],
-        $dataRow["expected_delivery_date"],
-        $dataRow["title"],
-        $dataRow["deposit"],
-        $dataRow["status"]
-    );
+
    array_push($listReceiptions, $recieption);
 }
 
