@@ -2,7 +2,7 @@
 require 'connect.php';
 class Receiption {
     // Propertives
-    private $name;
+    public $name;
     public $dueDate;
     public $typeOfService;
     public $deposit;
