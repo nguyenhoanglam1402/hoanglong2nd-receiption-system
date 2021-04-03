@@ -9,7 +9,7 @@ $(document).ready(function () {
                 displayComponent(response);
             },
             error: function (log) {
-                console.log("Unexpected error :" + log.statusText);
+                console.log("Unexpected error :\n > Title: " + log.status + "\n > Status: " + log.statusText);
             }
         });
     }, 3000);
