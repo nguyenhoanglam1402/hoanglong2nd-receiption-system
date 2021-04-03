@@ -8,6 +8,7 @@ class Receiption {
     public $deposit;
     public $status;
 
+    //Constructor
     public function __construct($name, $dueDate, $typeOfService, $deposit, $status){
         $this->name = $name;
         $this->dueDate = $dueDate;
@@ -15,6 +16,7 @@ class Receiption {
         $this->deposit = $deposit;
         $this->status = $status;
     }
+
 
     public function setStatus($status){
         $this->status = $status;
@@ -49,7 +51,7 @@ while($dataRow = pg_fetch_assoc($result)) {
         $dataRow['expected_delivery_date'],
         $dataRow['title'],
         $dataRow['deposit'],
-        $dataRow['status']
+        $dataRow['is_done']
     );
    array_push($listReceiptions, $recieption);
 }
