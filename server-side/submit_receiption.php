@@ -33,7 +33,7 @@ function checkCustomerID(){
 }
 
 function createCustomerInformation(){
-    $query = "INSERT INTO customer (customer_name, phone_number) VALUES ($name, $phone)";
+    $query = "INSERT INTO customer (customer_name, phone_number) VALUES ('$name', '$phone')";
 }
 
 function createNewReceiption(){
