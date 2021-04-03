@@ -16,20 +16,23 @@ $(document).ready(function () {
 
     function displayComponent(response){
         console.log(response);
-        listOfReceiptions = response;
-        listOfReceiptions.forEach(receiption => {
-            $('.listCustomer').replaceAll(
-                '<li class="customer-item">'+
-                    '<div class="customer-item-card shadow-sm">'+
-                        '<div class="title">'+
-                            '<span class="customer-name-tag">'+receiption.name+'</span>'+
-                            '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
+        if(listOfReceiptions.length != response.length){
+            listOfReceiptions = response;
+            $('.listCustomer').empty();
+            listOfReceiptions.forEach(receiption => {
+                $('.listCustomer').append(
+                    '<li class="customer-item">'+
+                        '<div class="customer-item-card shadow-sm">'+
+                            '<div class="title">'+
+                                '<span class="customer-name-tag">'+receiption.name+'</span>'+
+                                '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
+                            '</div>'+
+                            '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
+                            '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
                         '</div>'+
-                        '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
-                        '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
-                    '</div>'+
-                '</li>'
-                );
-        });
+                    '</li>'
+                    );
+            });
+        }
     }
 });
