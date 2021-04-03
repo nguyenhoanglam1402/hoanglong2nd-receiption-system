@@ -8,8 +8,7 @@ class Receiption {
     private $deposit;
     private $status;
 
-    public function __Receiption($name, $dueDate, 
-                            $typeOfService, $deposit, $status){
+    public function __Receiption($name, $dueDate, $typeOfService, $deposit, $status){
         $this->name = $name;
         $this->dueDate = $dueDate;
         $this->typeOfService = $typeOfService;
@@ -36,7 +35,6 @@ class Receiption {
 }
 
 $listReceiptions = [];
-
 $query = "SELECT customer_name, phone_number, 
 expected_delivery_date, title, description, deposit, rest_amount 
 FROM receiption_product_service 
@@ -47,8 +45,14 @@ $result = pg_query($connect, $query);
 
 
 while($dataRow = pg_fetch_assoc($result)) {
-
-   array_push($listReceiptions, $recieption);
+    $recieption = new __Receiption(
+        $dataRow['customer_name'],
+        $dataRow['expected_delivery_date'],
+        $dataRow['title'],
+        $dataRow['deposit'],
+        $dataRow['status']
+    );
+   $listReceiptions[] = $recieption;
 }
 
 echo json_encode($listReceiptions);
