@@ -3,7 +3,7 @@ $(document).ready(function () {
     setInterval(() => {
         $.ajax({
             type: "GET",
-            url: "/server-side/getRecieptions.php",
+            url: "/server-side/getReceiptions.php",
             dataType:"json",
             success: function (response) {
                 displayComponent(response);
