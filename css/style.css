@@ -168,15 +168,15 @@ i{
 }
 
 .dangerous-time{
-    color: #fc1d1275;
+    background-color: #fc1d1275;
 }
 
 .warning-time{
-    color: #fc891275;
+    background-color: #fc891275;
 }
 
 .long-term{
-    color: #1275fc75;
+    background-color: #1275fc75;
 }
 
 @media(min-width:800px){
