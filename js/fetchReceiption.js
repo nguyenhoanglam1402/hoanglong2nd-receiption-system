@@ -9,7 +9,7 @@ $(document).ready(function () {
                 displayComponent(response);
             },
             error: function (log) {
-                console.log("Unexpected error :" + log);
+                console.log("Unexpected error :" + log.statusText);
             }
         });
     }, 3000);
