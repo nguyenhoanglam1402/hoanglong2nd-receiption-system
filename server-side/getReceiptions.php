@@ -52,6 +52,7 @@ while($dataRow = pg_fetch_assoc($result)) {
         $dataRow['deposit'],
         $dataRow['status']
     );
+    die echo 'After created object';
    $listReceiptions[] = $recieption;
 }
 
