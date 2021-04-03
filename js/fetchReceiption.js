@@ -34,6 +34,9 @@ $(document).ready(function () {
                 );
                 setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
             });
+        } else if(response.length == 0){
+            $('listCustomer').empty();
+            $('listCustomer').append('<p class="trending-list-item">Không có dữ liệu</p>');
         }
     }
 
