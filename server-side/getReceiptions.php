@@ -2,7 +2,7 @@
 require 'connect.php';
 class Receiption {
     // Propertives
-    public $pid;
+    public $rid;
     public $name;
     public $dueDate;
     public $typeOfService;
