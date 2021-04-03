@@ -40,10 +40,10 @@ $(document).ready(function () {
     function setStatusOfCustomerCard(dueDate, rid){
         var remainingDate = calculateDifferentDay(dueDate);
         if( remainingDate >= 3 && remainingDate <=7){
-            $("#" + rid).addClass("dangerous-time");
+            $("#" + rid).addClass("warning-time");
         }
         else if(remainingDate < 3){
-            $("#" + rid).addClass("warning-time");
+            $("#" + rid).addClass("dangerous-time");
         }
         else{
             $("#" + rid).addClass("long-term");
