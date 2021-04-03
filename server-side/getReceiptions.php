@@ -51,7 +51,7 @@ while($dataRow = pg_fetch_assoc($result)) {
         $dataRow['deposit'],
         $dataRow['status']
     );
-   $listReceiptions[] = $recieption;
+   array_push($listReceiptions, $recieption);
 }
 
 echo json_encode($listReceiptions);
