@@ -31,7 +31,8 @@ $(document).ready(function () {
                             '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
                         '</div>'+
                     '</li>'
-                    );
+                );
+                setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
             });
         }
     }
