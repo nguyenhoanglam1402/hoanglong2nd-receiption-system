@@ -58,6 +58,6 @@ while($dataRow = pg_fetch_assoc($result)) {
     array_push($listReceiptions, $recieption);
 }
 
-echo $listReceiptions;
+echo json_encode($listReceiptions);
 
 ?>

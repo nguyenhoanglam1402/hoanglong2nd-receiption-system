@@ -2,7 +2,7 @@ $(document).ready(function () {
     var listOfReceiptions = [];
     setInterval(() => {
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: "/server-side/getReceiptions.php",
             dataType:"json",
             success: function (response) {
