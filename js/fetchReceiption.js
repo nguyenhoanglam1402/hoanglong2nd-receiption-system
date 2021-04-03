@@ -21,7 +21,7 @@ $(document).ready(function () {
             $('.listCustomer').empty();
             listOfReceiptions.forEach(receiption => {
                 $('.listCustomer').append(
-                    '<li class="customer-item">'+
+                    '<li class="customer-item" id="'+receiption.id+'">'+
                         '<div class="customer-item-card shadow-sm">'+
                             '<div class="title">'+
                                 '<span class="customer-name-tag">'+receiption.name+'</span>'+
@@ -34,5 +34,30 @@ $(document).ready(function () {
                     );
             });
         }
+    }
+
+    function setStatusOfCustomerCard(dueDate, rid){
+        var remainingDate = calculateDifferentDay(dueDate);
+        if( remainingDate >= 3 && remainingDate <=7){
+            $("'#" + rid +"'").addClass("dangerous-time");
+        }
+        else if(remainingDate < 3){
+            $("'#" + rid +"'").addClass("warning-time");
+        }
+        else{
+            $("'#" + rid +"'").addClass("long-term");
+        }
+    }
+
+    function calculateDifferentDay(dateEnd){
+        var currentDate = new Date();
+        var dateTime = currentDate.getFullYear()+'-'+
+                        (currentDate.getMonth() + 1) +'-'+
+                        currentDate.getDate();
+        var currentTime = new Date(dateTime);
+        var dueDay = new Date(dateEnd);
+        var time_difference = dueDay.getTime() - currentTime.getTime();  
+        var days_difference = time_difference / (1000 * 60 * 60 * 24);  
+        return days_difference;
     }
 });

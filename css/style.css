@@ -167,6 +167,18 @@ i{
     padding-inline-start: 0;
 }
 
+.dangerous-time{
+    background-color: #fc1d1275;
+}
+
+.warning-time{
+    background-color: #fc891275;
+}
+
+.long-term{
+    background-color: #1275fc75;
+}
+
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;
