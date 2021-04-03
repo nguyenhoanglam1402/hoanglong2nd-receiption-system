@@ -31,7 +31,11 @@ $(document).ready(function () {
                     phone: phoneNumber
                 },
                 success: function (response) {
-                    
+                    if(confirm(response+"\nBạn có muốn làm mới biên lai không ?") == true){
+                        location.reload();
+                    } else{
+                        $('#cancel-button').text('Trở về');
+                    }
                 }
             });
         }

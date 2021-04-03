@@ -37,3 +37,16 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {}
 });
+
+
+function getDataFromWeek(){
+    $.ajax({
+        type: "POST",
+        url: "url",
+        data: "data",
+        dataType: "dataType",
+        success: function (response) {
+            
+        }
+    });
+}
