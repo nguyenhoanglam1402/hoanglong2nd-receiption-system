@@ -18,7 +18,7 @@ $(document).ready(function () {
         console.log(response);
         listOfReceiptions = response;
         listOfReceiptions.forEach(receiption => {
-            $('.listCustomer').append(
+            $('.listCustomer').replaceAll(
                 '<li class="customer-item">'+
                     '<div class="customer-item-card shadow-sm">'+
                         '<div class="title">'+
