@@ -3,10 +3,10 @@ require 'connect.php';
 class Receiption {
     // Propertives
     private $name;
-    private $dueDate;
-    private $typeOfService;
-    private $deposit;
-    private $status;
+    public $dueDate;
+    public $typeOfService;
+    public $deposit;
+    public $status;
 
     public function __construct($name, $dueDate, $typeOfService, $deposit, $status){
         $this->name = $name;
