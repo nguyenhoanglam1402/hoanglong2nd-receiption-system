@@ -55,7 +55,7 @@ while($dataRow = pg_fetch_assoc($result)) {
         $dataRow["status"],
     );
 
-    array_push($listReceiptions, $recieption);
+   // array_push($listReceiptions, $recieption);
 }
 pg_close($connect);
 echo json_encode($listReceiptions);
