@@ -2,11 +2,14 @@ $(document).ready(function () {
     var listOfReceiptions = [];
     setInterval(() => {
         $.ajax({
-            type: "POST",
-            url: "/server-side/getRecieption.php",
+            type: "GET",
+            url: "/server-side/getRecieptions.php",
             dataType:"json",
             success: function (response) {
                 displayComponent(response);
+            },
+            error: function (log) {
+                console.log("Unexpected error :" + log);
             }
         });
     }, 3000);
