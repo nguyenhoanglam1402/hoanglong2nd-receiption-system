@@ -11,7 +11,7 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 //check exist customer via their name and phone number
-
+echo 'Here';
 while(checkCustomerID() == null){
     createCustomerInformation();
 }
@@ -22,8 +22,6 @@ createNewReceiption();
 function checkCustomerID(){
     $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
     $resultCheckingQuery = pg_query($connect, $checkingQuery);
-    echo "I'm here";
-    die();
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
