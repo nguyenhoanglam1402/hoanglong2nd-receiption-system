@@ -11,8 +11,11 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 //check exist customer via their name and phone number
+
 while(checkCustomerID() == null){
     createCustomerInformation();
+    echo "I'm after while statement";
+    die();
 }
 $customerID = checkCustomerID();
 createNewReceiption();
