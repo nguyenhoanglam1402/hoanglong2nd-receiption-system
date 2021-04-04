@@ -27,7 +27,7 @@ function checkCustomerID(){
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
-            return $resultOfRows['cus_id'];
+            echo ($resultOfRows['cus_id']);
         }
     }
     return null;
