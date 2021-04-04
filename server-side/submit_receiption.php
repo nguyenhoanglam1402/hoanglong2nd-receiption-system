@@ -10,14 +10,18 @@ $depos = $_POST['depos'];
 $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
-$checkCustomerID = checkCustomerID();
 
 //check exist customer via their name and phone number
-while(checkCustomerID()===false){
-    createCustomerInformation();
-}
-
-createNewReceiption();
+do{
+    $checkCustomerID = checkCustomerID();
+    if($checkCustomerID != null){
+        createNewReceiption();
+        break;
+    }
+    else{
+        createCustomerInformation();
+    }
+} while (true);
 
 
 function checkCustomerID(){
@@ -27,10 +31,9 @@ function checkCustomerID(){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
             $checkCustomerID = $resultOfRows['cus_id'];
-            return true;
         }
     }
-    return false;
+    $checkCustomerID = null;
 }
 
 function createCustomerInformation(){
