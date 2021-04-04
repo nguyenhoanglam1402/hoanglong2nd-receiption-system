@@ -9,7 +9,7 @@ function &fetchDailyData($startDate, $endDate, $connect): array
 {
     $query = "SELECT title, created_date 
                 FROM receiption_product_service 
-                WHERE created_date >= '$startDate' AND create_date <= '$endDate'";
+                WHERE created_date >= '$startDate' AND created_date <= '$endDate'";
     $result = pg_query($connect, $query);
     $data = pg_fetch_assoc($result);
     return $data;
