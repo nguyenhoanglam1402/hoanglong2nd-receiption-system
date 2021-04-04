@@ -3,12 +3,9 @@
 
 class DailyData
 {
-    public function __construct($cardPicture, $studioPicture,
-                                $weddingItems, $weddingPicture)
+    public function __construct($typeOfService, $created_date)
     {
-        $this->$cardPicture = $cardPicture;
-        $this->$studioPicture = $studioPicture;
-        $this->$weddingItems = $weddingItems;
-        $this->$weddingPicture = $weddingPicture;
+        $this->$typeOfService = $typeOfService;
+        $this->$created_date = $created_date;
     }
 }
