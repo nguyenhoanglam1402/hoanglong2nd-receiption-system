@@ -25,15 +25,15 @@ class Receiption {
     }
 
     public function getName(){
-        return $name;
+        return $this->name;
     }
 
     public function getDueDate(){
-        return $dueDate;
+        return $this->dueDate;
     }
 
     public function getTypeOfService(){
-        return $typeOfService;
+        return $this->typeOfService;
     }
 
 }

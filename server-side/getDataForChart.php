@@ -12,7 +12,10 @@ function &fetchDailyData($startDate, $endDate, $connect): array
     $query = "SELECT title, created_date FROM receiption_product_service WHERE created_date >= '$startDate' AND created_date <= '$endDate'";
     $result = pg_query($connect, $query);
     while ($data = pg_fetch_assoc($result)){
-        $dailyDate = new DailyData($data['title'], $data['created_date']);
+        $dailyDate = new DailyData(
+            $data['title'],
+            $data['created_date']
+        );
         $weeklyDate->AddDailyData($dailyDate);
     }
     $exportData = $weeklyDate->ExportWeeklyData();
