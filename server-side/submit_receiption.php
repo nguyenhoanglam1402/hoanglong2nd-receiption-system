@@ -3,7 +3,6 @@
 require 'connect.php';
 //parameters
 $name = $_POST['name'];
-echo $name;
 $type = $_POST['type'];
 $descr = $_POST['descr'];
 $last = $_POST['last'];
@@ -12,13 +11,15 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 $checkCustomerID;
-//check exist customer via their name and phone number
-while(checkCustomerID()== ''){
-    createCustomerInformation();
-    $checkCustomerID = checkCustomerID();
-}
 
-createNewReceiption();
+echo $name;
+//check exist customer via their name and phone number
+// while(checkCustomerID()== ''){
+//     //createCustomerInformation();
+//     //$checkCustomerID = checkCustomerID();
+// }
+
+//createNewReceiption();
 
 
 function checkCustomerID(){
@@ -27,11 +28,11 @@ function checkCustomerID(){
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
-            return $resultOfRows['cus_id'];
+            //return $resultOfRows['cus_id'];
         }
         else{
             //create new customer
-            return '';
+            //return '';
         }
     }
 }
