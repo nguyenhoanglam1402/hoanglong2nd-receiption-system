@@ -11,18 +11,6 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 $checkCustomerID;
-//check exist customer via their name and phone number
-do{
-    $checkCustomerID =& checkCustomerID();
-    if($checkCustomerID != null){
-        createNewReceiption();
-        break;
-    }
-    else{
-        createCustomerInformation();
-    }
-} while (true);
-
 
 function &checkCustomerID(){
     $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
@@ -48,5 +36,18 @@ function createNewReceiption(){
     $resultOfCreationQuery = pg_query($connect, $requestSubmitQuery);
     echo 'Hóa đơn đã được xử lý !';
 }
+
+//check exist customer via their name and phone number
+do{
+    $checkCustomerID =& checkCustomerID();
+    if($checkCustomerID != null){
+        createNewReceiption();
+        break;
+    }
+    else{
+        createCustomerInformation();
+    }
+} while (true);
+
 
 ?>
