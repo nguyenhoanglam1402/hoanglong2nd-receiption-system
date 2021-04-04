@@ -4,6 +4,34 @@ require 'connect.php';
 $startDate = '2021-4-1';
 $endDate = '2021-4-14';
 
+class DailyData
+{
+    private string $typeOfService;
+    private string $created_date;
+
+    public function __construct($typeOfService, $created_date)
+    {
+        $this->typeOfService = $typeOfService;
+        $this->created_date = $created_date;
+    }
+}
+
+class WeeklyData
+{
+    private array $weeklyData = [];
+
+    public function __construct()
+    { }
+
+    public function AddDailyData($dailyData){
+        array_push($this->weeklyData, $dailyData);
+    }
+
+    public function ExportWeeklyData(): array
+    {
+        return $this->weeklyData;
+    }
+}
 
 function &fetchDailyData($startDate, $endDate, $connect): array
 {
