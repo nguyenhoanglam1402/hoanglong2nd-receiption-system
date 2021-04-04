@@ -11,7 +11,7 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 //check exist customer via their name and phone number
-while(checkCustomerID() != null){
+while(checkCustomerID() == null){
     createCustomerInformation();
 }
 $customerID = checkCustomerID();
