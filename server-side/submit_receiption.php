@@ -14,7 +14,8 @@ $checkCustomerID;
 
 //check exist customer via their name and phone number
 while(checkCustomerID() === null){
-    createCustomerInformation();
+    echo checkCustomerID();
+    // createCustomerInformation();
     // $checkCustomerID = checkCustomerID();
 }
 
