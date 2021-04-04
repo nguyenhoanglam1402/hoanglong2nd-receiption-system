@@ -10,7 +10,7 @@ $depos = $_POST['depos'];
 $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
-
+$checkCustomerID;
 //check exist customer via their name and phone number
 do{
     $checkCustomerID =& checkCustomerID();
@@ -44,7 +44,7 @@ function createCustomerInformation(){
 function createNewReceiption(){
     $requestSubmitQuery = "INSERT INTO receiption_product_service 
     (cid, title, description, expected_delivery_date, created_date, deposit, rest_amount, is_done)
-    VALUES(".$customerID.", '$type', '$descr', '$date', '$creatDate', $depos, $last, false)";
+    VALUES(".$checkCustomerID.", '$type', '$descr', '$date', '$creatDate', $depos, $last, false)";
     $resultOfCreationQuery = pg_query($connect, $requestSubmitQuery);
     echo 'Hóa đơn đã được xử lý !';
 }
