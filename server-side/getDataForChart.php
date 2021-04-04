@@ -4,10 +4,7 @@ require 'connect.php';
 $startDate = $_POST['startDate'];
 $endDate = $_POST['endDate'];
 
-$result =& fetchDailyData($startDate, $endDate, $connect);
-echo json_encode($result);
 
-//fetch data from PostgreSQL
 function &fetchDailyData($startDate, $endDate, $connect): array
 {
     $query = "SELECT title, created_date 
@@ -17,5 +14,11 @@ function &fetchDailyData($startDate, $endDate, $connect): array
     $data = pg_fetch_assoc($result);
     return $data;
 }
+
+$result =& fetchDailyData($startDate, $endDate, $connect);
+echo json_encode($result);
+
+//fetch data from PostgreSQL
+
 
 
