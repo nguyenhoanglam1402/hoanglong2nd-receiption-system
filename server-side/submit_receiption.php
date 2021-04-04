@@ -3,6 +3,7 @@
 require 'connect.php';
 //parameters
 $name = $_POST['name'];
+echo $name;
 $type = $_POST['type'];
 $descr = $_POST['descr'];
 $last = $_POST['last'];
@@ -10,9 +11,9 @@ $depos = $_POST['depos'];
 $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
+$checkCustomerID;
 //check exist customer via their name and phone number
-$customerID = checkCustomerID();
-while($customerID == ''){
+while(checkCustomerID()== ''){
     createCustomerInformation();
     $checkCustomerID = checkCustomerID();
 }

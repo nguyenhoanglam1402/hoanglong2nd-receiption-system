@@ -36,6 +36,9 @@ $(document).ready(function () {
                     } else{
                         $('#cancel-button').text('Trở về');
                     }
+                },
+                error: function(log){
+                    console.log('Unexpected error:\n >' + log.status);
                 }
             });
         }
