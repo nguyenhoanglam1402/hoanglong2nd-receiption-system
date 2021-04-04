@@ -3,8 +3,7 @@
 
 class WeeklyData
 {
-    private $weeklyData = [];
-    private static $amountOfDate = 0;
+    private array $weeklyData = [];
 
     public function __construct()
     { }
