@@ -14,8 +14,6 @@ $phone = $_POST['phone'];
 
 while(checkCustomerID() == null){
     createCustomerInformation();
-    echo "I'm after while statement";
-    die();
 }
 $customerID = checkCustomerID();
 createNewReceiption();
@@ -24,6 +22,8 @@ createNewReceiption();
 function checkCustomerID(){
     $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
     $resultCheckingQuery = pg_query($connect, $checkingQuery);
+    echo "I'm here";
+    die();
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
