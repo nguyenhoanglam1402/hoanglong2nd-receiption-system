@@ -11,13 +11,13 @@ $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
 $checkCustomerID;
-
+echo checkCustomerID();
 //check exist customer via their name and phone number
-while(checkCustomerID() === null){
-    echo checkCustomerID();
-    // createCustomerInformation();
-    // $checkCustomerID = checkCustomerID();
-}
+// while(checkCustomerID() === null){
+    
+//     // createCustomerInformation();
+//     // $checkCustomerID = checkCustomerID();
+// }
 
 // createNewReceiption();
 
@@ -26,11 +26,11 @@ function checkCustomerID(){
     $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
     $resultCheckingQuery = pg_query($connect, $checkingQuery);
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
-        // if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
-        //     //submit to database
-        //     return $resultOfRows['cus_id'];
-        // }
-        // return null;
+        if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
+            //submit to database
+            return $resultOfRows['cus_id'];
+        }
+        return null;
     }
 }
 
