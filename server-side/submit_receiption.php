@@ -13,7 +13,7 @@ $phone = $_POST['phone'];
 
 //check exist customer via their name and phone number
 do{
-    $checkCustomerID = checkCustomerID();
+    $checkCustomerID =& checkCustomerID();
     if($checkCustomerID != null){
         createNewReceiption();
         break;
@@ -24,13 +24,12 @@ do{
 } while (true);
 
 
-function checkCustomerID(){
+function &checkCustomerID(){
     $checkingQuery = "SELECT cus_id FROM customer WHERE customer_name = '$name' AND phone_number = '$phone'";
     $resultCheckingQuery = pg_query($connect, $checkingQuery);
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
-            echo '<script>alert("'.$resultOfRows['cus_id'].'");</script>';
             $checkCustomerID = $resultOfRows['cus_id'];
         }
     }
