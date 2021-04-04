@@ -10,12 +10,11 @@ $depos = $_POST['depos'];
 $date = $_POST['date'];
 $creatDate = $_POST['credate'];
 $phone = $_POST['phone'];
-$checkCustomerID;
+$checkCustomerID = checkCustomerID();
 
 //check exist customer via their name and phone number
-while(checkCustomerID() == null){
+while(!checkCustomerID()){
     createCustomerInformation();
-    $checkCustomerID = checkCustomerID();
 }
 
 createNewReceiption();
@@ -27,10 +26,11 @@ function checkCustomerID(){
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
-            echo ($resultOfRows['cus_id']);
+            $checkCustomerID = $resultOfRows['cus_id'];
+            return true;
         }
     }
-    return null;
+    return false;
 }
 
 function createCustomerInformation(){
