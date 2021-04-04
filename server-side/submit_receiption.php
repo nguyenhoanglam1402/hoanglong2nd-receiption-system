@@ -30,10 +30,10 @@ function &checkCustomerID(){
     while($resultOfRows = pg_fetch_assoc($resultCheckingQuery)){
         if($resultOfRows['cus_id'] != null || $resultOfRows != ''){
             //submit to database
-            $checkCustomerID = $resultOfRows['cus_id'];
+            return $resultOfRows['cus_id'];
         }
     }
-    $checkCustomerID = null;
+    return null;
 }
 
 function createCustomerInformation(){
