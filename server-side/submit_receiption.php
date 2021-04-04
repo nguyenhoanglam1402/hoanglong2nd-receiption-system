@@ -13,7 +13,7 @@ $phone = $_POST['phone'];
 $checkCustomerID = checkCustomerID();
 
 //check exist customer via their name and phone number
-while(!checkCustomerID()){
+while(checkCustomerID()===false){
     createCustomerInformation();
 }
 
