@@ -3,8 +3,8 @@
 
 class DailyData
 {
-    private string $typeOfService;
-    private string $created_date;
+    private $typeOfService;
+    private $created_date;
 
     public function __construct($typeOfService, $created_date)
     {

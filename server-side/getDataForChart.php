@@ -15,7 +15,6 @@ function &fetchDailyData($startDate, $endDate, $connect): array
         $weeklyDate->AddDailyData($dailyDate);
     }
     $exportData = $weeklyDate->ExportWeeklyData();
-    echo $exportData;
     return $exportData;
 }
 
