@@ -59,6 +59,7 @@ function dataResolve(response){
 
 function drawChart(){
     var ctx = document.getElementById('chartView').getContext('2d');
+    console.log('Im here');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
