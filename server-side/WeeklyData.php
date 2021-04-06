@@ -19,7 +19,7 @@ class WeeklyData
     {
         for($date = strtotime($this->dateStart); $date <= strtotime($this->dateEnd); $date = strtotime("+1 day", $date)){
             $dailyData = new DailyData();
-            $dailyData->setNodes($date, $connect);
+            $dailyData->setNodes($this->dateStart, $connect);
             array_push($this->weeklyData, $dailyData);
         }
     }
