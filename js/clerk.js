@@ -7,7 +7,7 @@ class Clerk {
         _listOfAmount.push(amount);
     }
 
-    get getData(){
+    getData(){
         return this._listOfAmount;
     }
 }
