@@ -72,25 +72,25 @@ function drawChart(){
                     label: 'Ảnh cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#007bff',
-                    data: [1, 0, 0, 0, 0, 0, 0, 0]
+                    data: datasets.getData()
                 },
                 {
                     label: 'Thuê áo cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#009688',
-                    data: [dataset2.getData()]
+                    data: dataset3.getData()
                 },
                 {
                     label: 'Hình phòng (Studio)',
                     backgroundColor: '#fff0',
                     borderColor: '#dc3545',
-                    data: [dataset2.getData()]
+                    data: dataset2.getData()
                 },
                 {
                     label: 'Lượng đặt mâm quả',
                     backgroundColor: '#fff0',
                     borderColor: '#fd7e14',
-                    data: [dataset1.getData()]
+                    data: dataset1.getData()
                 }
             ]
     },
