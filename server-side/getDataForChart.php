@@ -88,7 +88,6 @@ function &fetchDailyData($startDate, $endDate, $connect)
 
 $result =& fetchDailyData($startDate, $endDate, $connect);
 
-$result = [];
 echo json_encode($result);
 
 //fetch data from PostgreSQL
