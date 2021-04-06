@@ -80,7 +80,7 @@ function dataResolve(response){
             });
         });
     }
-    console.log(dataset1.getData());
-    console.log(dataset2.getData());
-    console.log(dataset3.getData());
+    console.log(dataset1.getData);
+    console.log(dataset2.getData);
+    console.log(dataset3.getData);
 }
