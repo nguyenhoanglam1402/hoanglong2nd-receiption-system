@@ -62,28 +62,35 @@ function getDataFromWeek(){
 
 function dataResolve(response){
     var listOfDailyData = [];
-    listOfDailyData = response;
-    console.log("List of daily data: "+listOfDailyData);
-    listOfDailyData.forEach(daily => {
-        daily.forEach(node => {
-            switch(node.title){
-                case "Ảnh cưới":
-                    dataset.addData(node.amount);
-                    break;
-                case "Mâm quả cưới":
-                    dataset1.addData(node.amount);
-                    break;
-                case "Ảnh Studio (Hình phòng)":
-                    dataset2.addData(node.amount);
-                    break;
-                case "Áo cưới (Cô dâu / Chú rể)":
-                    dataset3.addData(node.amount);
-                    break;
-            }
+    if(listOfDailyData.length != response.length){
+        listOfDailyData = null;
+        listOfDailyData = response;
+        console.log(listOfDailyData);
+        listOfDailyData.forEach(daily => {
+            daily.forEach(node => {
+                switch(node.title){
+                    case "Ảnh cưới":
+                        dataset.addData(node.amount);
+                        break;
+                    case "Mâm quả cưới":
+                        dataset1.addData(node.amount);
+                        break;
+                    case "Ảnh Studio (Hình phòng)":
+                        dataset2.addData(node.amount);
+                        break;
+                    case "Áo cưới (Cô dâu / Chú rể)":
+                        dataset3.addData(node.amount);
+                        break;
+                }
+            });
         });
-    });
-    console.log("Dataset 0 data: "+dataset.getData());
-    console.log("Dataset 1 data: "+dataset1.getData());
-    console.log("Dataset 2 data: "+dataset2.getData());
-    console.log("Dataset 3 data: "+dataset3.getData());
+    }
+    else {
+        console.log("Don't have any update !");
+    }
+
+    console.log(dataset.getData());
+    console.log(dataset1.getData());
+    console.log(dataset2.getData());
+    console.log(dataset3.getData());
 }
