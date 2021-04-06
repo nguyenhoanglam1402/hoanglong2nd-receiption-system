@@ -20,10 +20,10 @@ class DailyData
         ];
         for($indexOfNode = 0; $indexOfNode < count($listOfTitles); $indexOfNode++) {
             //query to select amount of each node.
-            $query = "SELECT COUNT(rid) AS Amount  FROM receiption_product_service WHERE created_date = '$date' AND title = '$listOfTitles[$indexOfNode]'";
+            $query = "SELECT COUNT(rid)  FROM receiption_product_service WHERE created_date = '$date' AND title = '$listOfTitles[$indexOfNode]'";
             $result = pg_query($connect, $query);
             $dataRow = pg_fetch_assoc($result);
-            $node = new Node($listOfTitles[$indexOfNode], $dataRow['Amount']);
+            $node = new Node($listOfTitles[$indexOfNode], $dataRow['Count']);
             // add node object into list of nodes (nodes)
             array_push($this->nodes, $node);
         }
