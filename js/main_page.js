@@ -24,7 +24,7 @@ function getDataFromWeek(){
 
 function dataResolve(response){
 
-    if(listOfDailyData != response){
+    if(JSON.stringify(listOfDailyData)!=JSON.stringify(response)){
         listOfDailyData = null;
         listOfDailyData = response;
         console.log(listOfDailyData);
