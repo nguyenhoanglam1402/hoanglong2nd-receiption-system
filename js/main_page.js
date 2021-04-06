@@ -63,28 +63,11 @@ function getDataFromWeek(){
 
 function dataResolve(response){
     var listOfDailyData = [];
-    if(listOfDailyData.length != response.length){
-        listOfDailyData = response;
-        listOfDailyData.forEach(dailyData => {
-            dailyData.forEach(node => {
-                switch (node.title){
-                    case "Áo cưới":
-                        dataset.addData(node.amount);
-                        console.log(datasets.getData());
-                        break;
-                    case "Mâm quả cưới":
-                        dataset1.addData(node.amount);
-                        break;
-                    case "Ảnh Studio (Hình phòng)":
-                        dataset2.addData(node.amount);
-                        break;
-                    case "Áo cưới (Cô dâu / Chú rể)":
-                        dataset3.addData(node.amount);
-                        break;
-                }
-            });
-        });
-    }
+    listOfDailyData = response;
+    console.log(listOfDailyData);
+    listOfDailyData.forEach(node=>{
+        console.log(node);
+    })
     console.log(dataset1.getData());
     console.log(dataset2.getData());
     console.log(dataset3.getData());
