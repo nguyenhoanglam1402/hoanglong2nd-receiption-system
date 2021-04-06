@@ -39,10 +39,11 @@ class Receiption {
 }
 
 $listReceiptions = [];
-$query = 'SELECT rid, customer_name, phone_number, expected_delivery_date, title, deposit, rest_amount 
-FROM receiption_product_service 
-iNNER JOIN customer ON cid=cus_id
-ORDER BY expected_delivery_date ASC LIMIT 4';
+$query = "SELECT rid, customer_name, phone_number, 
+            expected_delivery_date, title, deposit, rest_amount 
+            FROM receiption_product_service 
+            iNNER JOIN customer ON cid=cus_id
+            ORDER BY expected_delivery_date ASC LIMIT 4";
 
 $result = pg_query($connect, $query);
 

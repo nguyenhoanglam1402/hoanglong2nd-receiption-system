@@ -1,28 +1,21 @@
 <?php
 
+use JetBrains\PhpStorm\Pure;
+
 require 'connect.php';
+include 'DailyData.php';
+include 'WeeklyData.php';
+
 $startDate = '2021-4-1';
 $endDate = '2021-4-14';
 
-include 'DailyData.php';
-include 'WeeklyData.php';
-function &fetchDailyData($startDate, $endDate, $connect): array
+#[Pure] function fetchDailyData($startDate, $endDate, $connect): array
 {
-    $weeklyDate = new WeeklyData();
-    $query = "SELECT title, created_date FROM receiption_product_service WHERE created_date >= '$startDate' AND created_date <= '$endDate'";
-    $result = pg_query($connect, $query);
-    while ($data = pg_fetch_assoc($result)){
-        $dailyDate = new DailyData(
-            $data['title'],
-            $data['created_date']
-        );
-        $weeklyDate->AddDailyData($dailyDate);
-    }
-    $exportData = $weeklyDate->ExportWeeklyData();
-    return $exportData;
+    $weeklyDate = new WeeklyData($startDate, $endDate, $connect);
+    return $weeklyDate->ExportWeeklyData();
 }
 
-$result =& fetchDailyData($startDate, $endDate, $connect);
+$result = fetchDailyData($startDate, $endDate, $connect);
 echo json_encode($result);
 
 //fetch data from PostgreSQL
