@@ -14,28 +14,28 @@ var chart = new Chart(ctx, {
         labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],
         datasets: [
             {
-                label: 'Lượng hình thẻ',
+                label: 'Ảnh cưới',
                 backgroundColor: '#fff0',
                 borderColor: '#007bff',
-                data: [0, 10, 5, 2, 20, 30, 45]
+                data: [dataset.getData()]
             },
             {
-                label: 'Lượng thuê áo cưới',
+                label: 'Thuê áo cưới',
                 backgroundColor: '#fff0',
                 borderColor: '#009688',
-                data: [5, 15, 5, 2, 25, 20, 35]
+                data: [dataset2.getData()]
             },
             {
-                label: 'Lượng hình phòng (Studio)',
+                label: 'Hình phòng (Studio)',
                 backgroundColor: '#fff0',
                 borderColor: '#dc3545',
-                data: [10, 9, 25, 23, 5, 34, 25]
+                data: [dataset2.getData()]
             },
             {
                 label: 'Lượng đặt mâm quả',
                 backgroundColor: '#fff0',
                 borderColor: '#fd7e14',
-                data: [5, 2, 1, 6, 7, 10, 2]
+                data: [dataset1.getData()]
             }
         ]
 },
