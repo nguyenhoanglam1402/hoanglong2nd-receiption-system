@@ -1,14 +1,14 @@
 class Clerk {
-    _listOfAmount = [];
+    #listOfAmount = [];
      constructor() {
         
      }
 
     set addData(amount){
-        _listOfAmount.push(amount);
+        this.#listOfAmount.push(amount);
     }
 
     getData(){
-        return this._listOfAmount;
+        return this.#listOfAmount;
     }
 }

@@ -66,6 +66,7 @@ function dataResolve(response){
                 switch (node.name){
                     case "Áo cưới":
                         dataset.addData(node.amount);
+                        console.log(datasets.getData());
                         break;
                     case "Mâm quả cưới":
                         dataset1.addData(node.amount);
