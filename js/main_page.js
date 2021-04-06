@@ -44,7 +44,10 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-setInterval( getDataFromWeek(),3000);
+setInterval(()=>{ 
+    getDataFromWeek(),
+    3000
+});
 
 function getDataFromWeek(){
     $.ajax({
@@ -63,7 +66,7 @@ function dataResolve(response){
         listOfDailyData = response;
         listOfDailyData.forEach(dailyData => {
             dailyData.forEach(node => {
-                switch (node.name){
+                switch (node.title){
                     case "Áo cưới":
                         dataset.addData(node.amount);
                         console.log(datasets.getData());
