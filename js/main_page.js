@@ -24,7 +24,7 @@ function getDataFromWeek(){
 
 function dataResolve(response){
 
-    if(listOfDailyData.length != response.length){
+    if(listOfDailyData != response){
         listOfDailyData = null;
         listOfDailyData = response;
         console.log(listOfDailyData);
@@ -46,11 +46,11 @@ function dataResolve(response){
                 }
             });
         });
+        drawChart();
     }
     else {
         console.log("Don't have any update !");
     }
-    drawChart();
     console.log(dataset.getData());
     console.log(dataset1.getData());
     console.log(dataset2.getData());
