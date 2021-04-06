@@ -10,7 +10,7 @@ class DailyData
     {
     }
 
-    public function setNodes($date, $connect): void
+    public function setNodes($date, $connect)
     {
         $listOfTitles = [
             "Ảnh cưới",
@@ -20,14 +20,10 @@ class DailyData
         ];
         for($indexOfNode = 0; $indexOfNode < count($listOfTitles); $indexOfNode++) {
             //query to select amount of each node.
-            $query = "SELECT COUNT(pid) FROM recieption_product_service WHERE created_date = '$date'
-                                                    AND title = '$listOfTitles[$indexOfNode]'";
+            $query = "SELECT COUNT(pid) FROM recieption_product_service WHERE created_date = '$date' AND title = '$listOfTitles[$indexOfNode]'";
             $result = pg_query($connect, $query);
             $dataRow = pg_fetch_row($result);
-            $node = new Node(
-                $listOfTitles[$indexOfNode],
-                $dataRow[0]
-            );
+            $node = new Node($listOfTitles[$indexOfNode], $dataRow[0]);
             // add node object into list of nodes (nodes)
             array_push($this->nodes, $node);
         }
