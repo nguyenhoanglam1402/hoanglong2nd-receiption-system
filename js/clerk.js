@@ -1,4 +1,4 @@
-export default class Clerk {
+class Clerk {
      constructor() {
          var _listOfAmount = [];
      }
