@@ -11,7 +11,6 @@ $query = "SELECT rid, customer_name, phone_number,
 
 $result = pg_query($connect, $query);
 
-
 while($dataRow = pg_fetch_assoc($result)) {
     $recieption = new Receiption(
         $dataRow['rid'],
