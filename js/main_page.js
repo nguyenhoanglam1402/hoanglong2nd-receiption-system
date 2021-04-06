@@ -64,7 +64,26 @@ function dataResolve(response){
     var listOfDailyData = [];
     listOfDailyData = response;
     console.log(listOfDailyData);
-    listOfDailyData.forEach(element => {
-        console.log(element);
+    listOfDailyData.forEach(daily => {
+        daily.forEach(node => {
+            switch(node.title){
+                case "Ảnh cưới":
+                    dataset.addData(node.amount);
+                    break;
+                case "Mâm quả cưới":
+                    dataset1.addData(node.amount);
+                    break;
+                case "Ảnh Studio (Hình phòng)":
+                    dataset2.addData(node.amount);
+                    break;
+                case "Áo cưới (Cô dâu / Chú rể)":
+                    dataset3.addData(node.amount);
+                    break;
+            }
+        });
     });
+    console.log(dataset.getData());
+    console.log(dataset1.getData());
+    console.log(dataset2.getData());
+    console.log(dataset3.getData());
 }
