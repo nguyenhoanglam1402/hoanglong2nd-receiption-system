@@ -18,7 +18,7 @@ class WeeklyData
     public function setDailyData($connect)
     {
         for($date = strtotime($this->dateStart); $date <= strtotime($this->dateEnd); $date = strtotime("+1 day", $date)){
-//            $dailyData = new DailyData();
+            $dailyData = new DailyData();
 //            $dailyData->setNodes($date, $connect);
 //            array_push($this->weeklyData, $dailyData);
         }
