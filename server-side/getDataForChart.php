@@ -12,7 +12,7 @@ $endDate = '2021-4-14';
 function &fetchDailyData($startDate, $endDate, $connect): array
 {
     $weeklyDate = new WeeklyData($startDate, $endDate, $connect);
-    return $weeklyDate->ExportWeeklyData();
+    return $weeklyDate;
 }
 
 $result =& fetchDailyData($startDate, $endDate, $connect);
