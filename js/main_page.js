@@ -72,7 +72,7 @@ function drawChart(){
                     label: 'Ảnh cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#007bff',
-                    data: [dataset.getData()]
+                    data: [1, 0, 0, 0, 0, 0, 0, 0]
                 },
                 {
                     label: 'Thuê áo cưới',
