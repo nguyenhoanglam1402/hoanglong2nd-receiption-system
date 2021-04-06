@@ -63,7 +63,7 @@ function getDataFromWeek(){
 function dataResolve(response){
     var listOfDailyData = [];
     listOfDailyData = response;
-    console.log(listOfDailyData);
+    console.log("List of daily data: "+listOfDailyData);
     listOfDailyData.forEach(daily => {
         daily.forEach(node => {
             switch(node.title){
@@ -82,8 +82,8 @@ function dataResolve(response){
             }
         });
     });
-    console.log(dataset.getData());
-    console.log(dataset1.getData());
-    console.log(dataset2.getData());
-    console.log(dataset3.getData());
+    console.log("Dataset 0 data: "+dataset.getData());
+    console.log("Dataset 1 data: "+dataset1.getData());
+    console.log("Dataset 2 data: "+dataset2.getData());
+    console.log("Dataset 3 data: "+dataset3.getData());
 }
