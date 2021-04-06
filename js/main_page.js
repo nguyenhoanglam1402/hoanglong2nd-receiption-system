@@ -66,8 +66,5 @@ function dataResolve(response){
     console.log(listOfDailyData);
     listOfDailyData.forEach(node=>{
         console.log(node);
-    })
-    console.log(dataset1.getData());
-    console.log(dataset2.getData());
-    console.log(dataset3.getData());
+    });
 }
