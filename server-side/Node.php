@@ -2,8 +2,8 @@
 
 class Node
 {
-    public $title;
-    public $amount;
+    public string $title;
+    public int $amount;
 
     public function __construct($title, $amount)
     {
