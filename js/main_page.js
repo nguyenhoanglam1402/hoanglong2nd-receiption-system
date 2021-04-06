@@ -45,9 +45,8 @@ var chart = new Chart(ctx, {
 });
 
 setInterval(()=>{ 
-    getDataFromWeek(),
-    3000
-});
+    getDataFromWeek()
+},3000);
 
 function getDataFromWeek(){
     $.ajax({
