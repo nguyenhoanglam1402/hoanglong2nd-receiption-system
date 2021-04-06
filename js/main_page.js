@@ -57,8 +57,7 @@ function dataResolve(response){
     console.log(dataset3.getData());
 }
 
-function drawChart(){
-    var ctx = document.getElementById('chartView').getContext('2d');
+var ctx = document.getElementById('chartView').getContext('2d');
     console.log('Im here');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -98,4 +97,3 @@ function drawChart(){
         // Configuration options go here
         options: {}
     });
-}
