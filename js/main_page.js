@@ -46,21 +46,21 @@ function dataResolve(response){
                 }
             });
         });
-        
     }
     else {
         console.log("Don't have any update !");
     }
+    drawChart();
     console.log(dataset.getData());
     console.log(dataset1.getData());
     console.log(dataset2.getData());
     console.log(dataset3.getData());
 }
 
-async function drawChart() {
+function drawChart(){
     var ctx = document.getElementById('chartView').getContext('2d');
     console.log('Im here');
-    var chart = new Chart(ctx, {
+    new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
     
@@ -72,25 +72,25 @@ async function drawChart() {
                     label: 'Ảnh cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#007bff',
-                    data: [ await dataset.getData()]
+                    data: [dataset.getData()]
                 },
                 {
                     label: 'Thuê áo cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#009688',
-                    data: [await dataset2.getData()]
+                    data: [dataset2.getData()]
                 },
                 {
                     label: 'Hình phòng (Studio)',
                     backgroundColor: '#fff0',
                     borderColor: '#dc3545',
-                    data: [await dataset2.getData()]
+                    data: [dataset2.getData()]
                 },
                 {
                     label: 'Lượng đặt mâm quả',
                     backgroundColor: '#fff0',
                     borderColor: '#fd7e14',
-                    data: [await dataset1.getData()]
+                    data: [dataset1.getData()]
                 }
             ]
     },
