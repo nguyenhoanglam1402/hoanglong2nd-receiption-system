@@ -12,7 +12,6 @@ class WeeklyData
     {
         $this->dateStart = $dateStart;
         $this->dateEnd = $dateEnd;
-        $this->setDailyData($connect);
     }
 
     public function setDailyData($connect)
