@@ -1,6 +1,7 @@
 class Clerk {
+    _listOfAmount = [];
      constructor() {
-         var _listOfAmount = [];
+        
      }
 
     set addData(amount){
