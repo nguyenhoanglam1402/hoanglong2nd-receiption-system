@@ -100,6 +100,7 @@
               </h1>
             </div>
             <ul class="listCustomer">
+	            <li class = "trending-list-item">Đang tải dữ liệu !</li>
             </ul>
           </div>
         </div>
