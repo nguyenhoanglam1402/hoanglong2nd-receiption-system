@@ -13,6 +13,6 @@ class Clerk {
     }
 
     resetData(){
-        this.#listOfAmount = null;
+        this.#listOfAmount = [];
     }
 }
