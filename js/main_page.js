@@ -1,4 +1,4 @@
-import 'clerk.js';
+import {Clerk} from 'clerk';
 
 var ctx = document.getElementById('chartView').getContext('2d');
 
