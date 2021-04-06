@@ -5,44 +5,6 @@ var dataset1 = new Clerk();
 var dataset2 = new Clerk();
 var dataset3 = new Clerk();
 
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],
-        datasets: [
-            {
-                label: 'Ảnh cưới',
-                backgroundColor: '#fff0',
-                borderColor: '#007bff',
-                data: [dataset.getData()]
-            },
-            {
-                label: 'Thuê áo cưới',
-                backgroundColor: '#fff0',
-                borderColor: '#009688',
-                data: [dataset2.getData()]
-            },
-            {
-                label: 'Hình phòng (Studio)',
-                backgroundColor: '#fff0',
-                borderColor: '#dc3545',
-                data: [dataset2.getData()]
-            },
-            {
-                label: 'Lượng đặt mâm quả',
-                backgroundColor: '#fff0',
-                borderColor: '#fd7e14',
-                data: [dataset1.getData()]
-            }
-        ]
-},
-
-    // Configuration options go here
-    options: {}
-});
 
 setInterval(()=>{ 
     getDataFromWeek()
@@ -88,9 +50,50 @@ function dataResolve(response){
     else {
         console.log("Don't have any update !");
     }
-
+    drawChart();
     console.log(dataset.getData());
     console.log(dataset1.getData());
     console.log(dataset2.getData());
     console.log(dataset3.getData());
+}
+
+function drawChart(){
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+    
+        // The data for our dataset
+        data: {
+            labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],
+            datasets: [
+                {
+                    label: 'Ảnh cưới',
+                    backgroundColor: '#fff0',
+                    borderColor: '#007bff',
+                    data: [dataset.getData()]
+                },
+                {
+                    label: 'Thuê áo cưới',
+                    backgroundColor: '#fff0',
+                    borderColor: '#009688',
+                    data: [dataset2.getData()]
+                },
+                {
+                    label: 'Hình phòng (Studio)',
+                    backgroundColor: '#fff0',
+                    borderColor: '#dc3545',
+                    data: [dataset2.getData()]
+                },
+                {
+                    label: 'Lượng đặt mâm quả',
+                    backgroundColor: '#fff0',
+                    borderColor: '#fd7e14',
+                    data: [dataset1.getData()]
+                }
+            ]
+    },
+    
+        // Configuration options go here
+        options: {}
+    });
 }
