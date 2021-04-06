@@ -3,7 +3,7 @@ include 'Node.php';
 
 class DailyData
 {
-    public array $nodes = [];
+    public $nodes = [];
 
     public function __construct()
     {

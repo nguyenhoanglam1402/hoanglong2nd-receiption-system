@@ -1,9 +1,6 @@
 <?php
 
-use JetBrains\PhpStorm\Pure;
-
 require 'connect.php';
-include 'DailyData.php';
 include 'WeeklyData.php';
 
 $startDate = '2021-4-1';
