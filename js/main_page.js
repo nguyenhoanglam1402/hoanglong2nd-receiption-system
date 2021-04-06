@@ -46,18 +46,19 @@ function dataResolve(response){
                 }
             });
         });
+        
     }
     else {
         console.log("Don't have any update !");
     }
-    drawChart();
     console.log(dataset.getData());
     console.log(dataset1.getData());
     console.log(dataset2.getData());
     console.log(dataset3.getData());
 }
 
-var ctx = document.getElementById('chartView').getContext('2d');
+async function drawChart() {
+    var ctx = document.getElementById('chartView').getContext('2d');
     console.log('Im here');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -71,25 +72,25 @@ var ctx = document.getElementById('chartView').getContext('2d');
                     label: 'Ảnh cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#007bff',
-                    data: [dataset.getData()]
+                    data: [ await dataset.getData()]
                 },
                 {
                     label: 'Thuê áo cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#009688',
-                    data: [dataset2.getData()]
+                    data: [await dataset2.getData()]
                 },
                 {
                     label: 'Hình phòng (Studio)',
                     backgroundColor: '#fff0',
                     borderColor: '#dc3545',
-                    data: [dataset2.getData()]
+                    data: [await dataset2.getData()]
                 },
                 {
                     label: 'Lượng đặt mâm quả',
                     backgroundColor: '#fff0',
                     borderColor: '#fd7e14',
-                    data: [dataset1.getData()]
+                    data: [await dataset1.getData()]
                 }
             ]
     },
@@ -97,3 +98,4 @@ var ctx = document.getElementById('chartView').getContext('2d');
         // Configuration options go here
         options: {}
     });
+}
