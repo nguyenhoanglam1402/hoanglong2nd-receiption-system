@@ -44,10 +44,7 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-setInterval(
-    getDataFromWeek(),
-    3000
-);
+setInterval( getDataFromWeek(),3000);
 
 function getDataFromWeek(){
     $.ajax({
@@ -83,7 +80,7 @@ function dataResolve(response){
             });
         });
     }
-    console.log(dataset1);
-    console.log(dataset2);
-    console.log(dataset3);
+    console.log(dataset1.getData());
+    console.log(dataset2.getData());
+    console.log(dataset3.getData());
 }
