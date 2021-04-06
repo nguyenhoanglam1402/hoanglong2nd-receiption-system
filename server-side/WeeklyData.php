@@ -7,6 +7,7 @@ class WeeklyData
     public $weeklyData = [];
     public $dateStart;
     public $dateEnd;
+    public $date;
 
     public function __construct($dateStart, $dateEnd, $connect)
     {
@@ -18,7 +19,8 @@ class WeeklyData
     {
         for($date = strtotime($this->dateStart); $date <= strtotime($this->dateEnd); $date = strtotime("+1 day", $date)){
             $dailyData = new DailyData();
-            $dailyData->setNodes($date, $connect);
+//            $dailyData->setNodes($date, $connect);
+            $this->date = $date;
             array_push($this->weeklyData, $dailyData);
         }
     }
