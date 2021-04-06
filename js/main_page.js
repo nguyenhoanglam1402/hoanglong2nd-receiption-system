@@ -1,4 +1,12 @@
+import 'clerk.js';
+
 var ctx = document.getElementById('chartView').getContext('2d');
+
+var dataset = new Clerk();
+var dataset1 = new Clerk();
+var dataset2 = new Clerk();
+var dataset3 = new Clerk();
+
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -38,14 +46,46 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
+setInterval(
+    getDataFromWeek(),
+    3000
+);
 
 function getDataFromWeek(){
     $.ajax({
         type: "POST",
-        url: "url",
-        data: "data",
-        dataType: "dataType",
+        url: "/server-side/getDataForChart.php",
+        dataType: "json",
         success: function (response) {
+            dataResolve(response);
         }
     });
+}
+
+function dataResolve(response){
+    var listOfDailyData = [];
+    if(listOfDailyData.length != response.length){
+        listOfDailyData = response;
+        listOfDailyData.forEach(dailyData => {
+            dailyData.forEach(node => {
+                switch (node.name){
+                    case "Áo cưới":
+                        dataset.addData(node.amount);
+                        break;
+                    case "Mâm quả cưới":
+                        dataset1.addData(node.amount);
+                        break;
+                    case "Ảnh Studio (Hình phòng)":
+                        dataset2.addData(node.amount);
+                        break;
+                    case "Áo cưới (Cô dâu / Chú rể)":
+                        dataset3.addData(node.amount);
+                        break;
+                }
+            });
+        });
+    }
+    console.log(dataset1);
+    console.log(dataset2);
+    console.log(dataset3);
 }
