@@ -1,4 +1,4 @@
-var ctx = document.getElementById('chartView').getContext('2d');
+
 var listOfDailyData = [];
 var dataset = new Clerk();
 var dataset1 = new Clerk();
@@ -58,6 +58,7 @@ function dataResolve(response){
 }
 
 function drawChart(){
+    var ctx = document.getElementById('chartView').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
