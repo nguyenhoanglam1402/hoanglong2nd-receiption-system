@@ -4,7 +4,7 @@ class Clerk {
         
      }
 
-    set addData(amount){
+    addData(amount){
         this.#listOfAmount.push(amount);
     }
 
