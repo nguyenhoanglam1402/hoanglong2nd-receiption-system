@@ -1,5 +1,5 @@
 var ctx = document.getElementById('chartView').getContext('2d');
-
+var listOfDailyData = [];
 var dataset = new Clerk();
 var dataset1 = new Clerk();
 var dataset2 = new Clerk();
@@ -61,7 +61,7 @@ function getDataFromWeek(){
 }
 
 function dataResolve(response){
-    var listOfDailyData = [];
+
     if(listOfDailyData.length != response.length){
         listOfDailyData = null;
         listOfDailyData = response;
