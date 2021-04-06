@@ -64,7 +64,7 @@ function dataResolve(response){
     var listOfDailyData = [];
     listOfDailyData = response;
     console.log(listOfDailyData);
-    listOfDailyData.forEach(node=>{
-        console.log(node);
+    listOfDailyData.forEach(element => {
+        console.log(element);
     });
 }
