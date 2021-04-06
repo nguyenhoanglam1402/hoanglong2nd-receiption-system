@@ -21,7 +21,7 @@ class WeeklyData
             $dailyData = new DailyData();
             $dailyData->setNodes(date("Y-m-d", $date), $connect);
             $this->date = $date;
-            array_push($this->weeklyData, $dailyData);
+            array_push($this->weeklyData, $dailyData->getNodes());
         }
     }
 
