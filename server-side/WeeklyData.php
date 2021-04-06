@@ -4,10 +4,10 @@ include 'DailyData.php';
 
 class WeeklyData
 {
-    public $weeklyData = [];
+    private $weeklyData = [];
     public $dateStart;
     public $dateEnd;
-    public $date;
+    private $date;
 
     public function __construct($dateStart, $dateEnd, $connect)
     {
@@ -23,5 +23,10 @@ class WeeklyData
             $this->date = $date;
             array_push($this->weeklyData, $dailyData);
         }
+    }
+
+    public function getWeeklyData(): array
+    {
+        return $this->weeklyData;
     }
 }

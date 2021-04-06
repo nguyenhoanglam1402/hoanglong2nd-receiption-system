@@ -8,7 +8,7 @@ $endDate = '2021-4-14';
 $weeklyDate = new WeeklyData($startDate, $endDate, $connect);
 $weeklyDate->setDailyData($connect);
 
-echo json_encode($weeklyDate);
+echo json_encode($weeklyDate->getWeeklyData());
 
 //fetch data from PostgreSQL
 
