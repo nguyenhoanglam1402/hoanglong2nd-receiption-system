@@ -1,4 +1,4 @@
-class Clerk {
+export default class Clerk {
      constructor() {
          var _listOfAmount = [];
      }
@@ -11,5 +11,3 @@ class Clerk {
         return this._listOfAmount;
     }
 }
-
-export default Clerk;
