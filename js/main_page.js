@@ -26,6 +26,10 @@ function dataResolve(response){
 
     if(JSON.stringify(listOfDailyData)!=JSON.stringify(response)){
         listOfDailyData = null;
+        dataset.resetData();
+        dataset1.resetData();
+        dataset2.resetData();
+        dataset3.resetData();
         listOfDailyData = response;
         console.log(listOfDailyData);
         listOfDailyData.forEach(daily => {

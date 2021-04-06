@@ -11,4 +11,8 @@ class Clerk {
     getData(){
         return this.#listOfAmount;
     }
+
+    resetData(){
+        this.#listOfAmount = null;
+    }
 }
