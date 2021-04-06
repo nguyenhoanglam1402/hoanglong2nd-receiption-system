@@ -11,3 +11,5 @@ class Clerk {
         return this._listOfAmount;
     }
 }
+
+export default Clerk;
