@@ -13,6 +13,7 @@ setInterval(()=>{
 function getDataFromWeek(){
     var currentDate = getCurrentDate();
     var startDate = getMonday(currentDate);
+    console.log(startDate + " -> " + currentDate);
     $.ajax({
         type: "POST",
         url: "/server-side/getDataForChart.php",
