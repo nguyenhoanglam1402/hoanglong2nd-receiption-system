@@ -8,12 +8,16 @@ var dataset3 = new Clerk();
 
 setInterval(()=>{ 
     getDataFromWeek()
-},1000);
+},3000);
 
 function getDataFromWeek(){
     $.ajax({
         type: "POST",
         url: "/server-side/getDataForChart.php",
+        data: {
+            stardate: getMonday(),
+            endate: getCurrentDate()
+        },
         dataType: "json",
         success: function (response) {
             dataResolve(response);
@@ -25,7 +29,7 @@ function getDataFromWeek(){
 function dataResolve(response){
 
     if(JSON.stringify(listOfDailyData)!=JSON.stringify(response)){
-        listOfDailyData = null;
+        listOfDailyData = [];
         dataset.resetData();
         dataset1.resetData();
         dataset2.resetData();
@@ -59,6 +63,22 @@ function dataResolve(response){
     console.log(dataset1.getData());
     console.log(dataset2.getData());
     console.log(dataset3.getData());
+}
+
+function getMonday(date) {
+    date = new Date(date);
+    var day = date.getDay(),
+        diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+    return new Date(date.setDate(diff));
+}
+
+function getCurrentDate() {
+    var currentDate = new Date();
+    var dateTime = currentDate.getFullYear()+'-'+
+        (currentDate.getMonth() + 1) +'-'+
+        currentDate.getDate();
+    var currentTime = new Date(dateTime);
+    return currentDate;
 }
 
 function drawChart(){
