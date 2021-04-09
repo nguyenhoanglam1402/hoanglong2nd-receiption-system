@@ -11,12 +11,14 @@ setInterval(()=>{
 },3000);
 
 function getDataFromWeek(){
+    var currentDate = getCurrentDate();
+    var startDate = getMonday(currentDate);
     $.ajax({
         type: "POST",
         url: "/server-side/getDataForChart.php",
         data: {
-            stardate: getMonday(),
-            endate: getCurrentDate()
+            stardate: startDate,
+            endate: currentDate
         },
         dataType: "json",
         success: function (response) {
