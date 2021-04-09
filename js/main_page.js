@@ -72,7 +72,9 @@ function getMonday(date) {
     date = new Date(date);
     var day = date.getDay(),
         diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
-    return new Date(date.setDate(diff));
+    var monday = new Date(date.setDate(diff));
+    var result = monday.getFullYear() + "-" + monday.getMonth() + "-" + monday.getDate();
+    return result;
 }
 
 function getCurrentDate() {
@@ -80,8 +82,7 @@ function getCurrentDate() {
     var dateTime = currentDate.getFullYear()+'-'+
         (currentDate.getMonth() + 1) +'-'+
         currentDate.getDate();
-    var currentTime = new Date(dateTime);
-    return currentDate;
+    return dateTime;
 }
 
 function drawChart(){
