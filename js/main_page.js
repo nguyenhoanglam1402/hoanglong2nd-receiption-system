@@ -73,7 +73,7 @@ function getMonday(date) {
     var day = date.getDay(),
         diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
     var monday = new Date(date.setDate(diff));
-    var result = monday.getFullYear() + "-" + monday.getMonth() + "-" + monday.getDate();
+    var result = monday.getFullYear() + "-" + (monday.getMonth() +1) + "-" + monday.getDate();
     return result;
 }
 
