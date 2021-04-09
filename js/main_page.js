@@ -124,6 +124,17 @@ function drawChart(){
     },
     
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                        // OR //
+                        beginAtZero: true   // minimum value will be 0.
+                    }
+                }]
+            }
+        }
     });
 }
