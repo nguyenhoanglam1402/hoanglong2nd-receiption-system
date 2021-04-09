@@ -120,7 +120,7 @@
     <script src="./js/fetchReceiption.js"></script>
     <script src="./js/effect.js"></script>
     <script src="./js/clerk.js"></script>
+    <script src="./js/customer_item_process.js"></script>
     <script src="./js/main_page.js"></script>
-
   </body>
 </html>
