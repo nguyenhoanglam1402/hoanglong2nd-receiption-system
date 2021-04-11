@@ -1,4 +1,4 @@
-<?php require './server-side/connect.php';?>
+<?php// require './server-side/connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -107,37 +107,21 @@
       </div>
     </div>
     <footer class="bg-dark text-center text-white">
+      <h2>PHẢN HỒI HỆ THỐNG LIÊN HỆ</h2>
       <!-- Grid container -->
-      <div class="container p-4 pb-0">
+      <div class="container p-2 pb-0">
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/lamnh.gcd/about" role="button"
             ><i class="fab fa-facebook-f"></i
           ></a>
-
-          <!-- Twitter -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-twitter"></i
-          ></a>
-
-          <!-- Google -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-instagram"></i
-          ></a>
-
           <!-- Linkedin -->
           <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
             ><i class="fab fa-linkedin-in"></i
           ></a>
-
           <!-- Github -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/nguyenhoanglam1402" role="button"
             ><i class="fab fa-github"></i
           ></a>
         </section>
@@ -146,7 +130,7 @@
       <!-- Grid container -->
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Bản quyền thuộc sở hữu:
+        © 2020 Bản quyền thuộc:
         <a class="text-white" href="https://https://www.facebook.com/lamnh.gcd/about">Nguyễn Hoàng Lâm</a>
       </div>
       
