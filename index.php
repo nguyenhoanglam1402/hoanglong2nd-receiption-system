@@ -1,4 +1,4 @@
-<?php// require './server-side/connect.php';?>
+<?php require './server-side/connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
