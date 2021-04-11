@@ -1,4 +1,4 @@
-<?php require './server-side/connect.php';?>
+<?php// require './server-side/connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,10 +16,10 @@
   <body>
     <div class="navbar-session">
       <!--This is Navbar session-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between shadow-sm mb-3 bg-white rounded">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between shadow-sm mb-3 bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/image_for_page/bootstrap-logo.svg" alt="" width="50" height="40">
+            <i class="fab fa-grav fas-lg"></i>
                 <span class="brand-name">BiO - Hoang Long 2</span> Kit
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,7 +111,7 @@
       <!-- Grid container -->
       <div class="container p-2 pb-0">
         <!-- Section: Social media -->
-        <section class="mb-4">
+        <section class="">
           <!-- Facebook -->
           <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/lamnh.gcd/about" role="button"
             ><i class="fab fa-facebook-f"></i
