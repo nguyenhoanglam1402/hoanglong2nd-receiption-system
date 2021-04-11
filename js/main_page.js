@@ -139,6 +139,12 @@ function drawChart(){
                         // OR //
                         beginAtZero: true   // minimum value will be 0.
                     }
+                }],
+                xAxes: [{
+                    display: true,
+                    ticks: {
+                        fontColor: "white",
+                    }
                 }]
             }
         }

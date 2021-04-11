@@ -210,6 +210,10 @@ a {
     color: white;
 }
 
+.bg-dark-customize {
+    background-color: #343a40a3;
+}
+
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;

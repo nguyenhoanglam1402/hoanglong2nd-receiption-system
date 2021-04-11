@@ -1,4 +1,4 @@
-<?php require './server-side/connect.php';?>
+<?php// require './server-side/connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,13 +52,13 @@
     </nav>
     </div>
     <div class="container">
-      <div class="chart-view-block shadow-sm bg-dark">
-        <canvas id="chartView">
+      <div class="chart-view-block shadow-sm bg-dark-customize">
+        <canvas id="chartView" heigh="550px">
         </canvas>
       </div>
       <div class="detail-block" id="detail-block">
         <div class="column">
-          <div class="recommend-block shadow-sm bg-dark">
+          <div class="recommend-block shadow-sm bg-dark-customize">
             <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 NHẬN ĐỊNH TỔNG QUAN
@@ -71,7 +71,7 @@
               <li class="list-detail"><a class="link-detail" id="product-index" href="#">Lượng khách mâm quả giảm sâu <b>(-15%)</b></a></li>
             </ul>
           </div>
-          <div class="revenue-list shadow-sm bg-dark">
+          <div class="revenue-list shadow-sm bg-dark-customize">
             <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 TỔNG DOANH THU
@@ -81,7 +81,7 @@
               <li class="customer-item">Không có dữ liệu !</li>
             </ul>
           </div>
-          <div class="trending-list shadow-sm bg-dark">
+          <div class="trending-list shadow-sm bg-dark-customize">
             <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
@@ -93,7 +93,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="customer-list shadow-sm bg-dark">
+          <div class="customer-list shadow-sm bg-dark-customize">
             <div class="title-bar shadow-sm revenue-bar">
               <h1>
                 KHÁCH HÀNG ĐANG ĐỢI
@@ -106,7 +106,7 @@
         </div>
       </div>
     </div>
-    <footer class="bg-dark text-center text-white">
+    <footer class="bg-dark-customize text-center text-white">
       <h2>PHẢN HỒI HỆ THỐNG LIÊN HỆ</h2>
       <!-- Grid container -->
       <div class="container p-2 pb-0">
