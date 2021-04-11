@@ -1,3 +1,6 @@
+.btn-floating{
+    border-radius: 25px;
+}
 
 .navbar-brand{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
