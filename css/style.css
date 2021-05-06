@@ -1,5 +1,5 @@
 body {
-    background: #1a181a;
+    background: #1e272e;
 }
 
 .navbar-brand{
@@ -19,16 +19,15 @@ body {
 
 .btn-outline{
     font-weight: 600;
-    color:#8912fc;
-    border: 1.5px solid #8b12fc6e;
+    color:#fd6c3e;
+    border: 1.5px solid #fea718a8;
 }
 
 
 .btn-outline:hover{
     font-weight: 600;
     color:#ffffff;
-    border: 1.5px solid #8b12fc6e;
-    background-color: #8912fc;
+    background: linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%);;
 }
 
 .chart-view-block{
@@ -39,15 +38,16 @@ body {
 
 .recommend-block{
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #ffffff;
 }
 
 .customer-list,.revenue-list,.trending-list{
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #ffffff;
 }
+
 
 h1{
     font-size: 1rem;
@@ -110,7 +110,7 @@ i{
     height: fit-content;
     background-color: #ffffff;
     padding: 5px 4px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px 10px;
 }
 
@@ -152,8 +152,8 @@ i{
 }
 
 .title-bar{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     height: 28px;
 }
 
@@ -185,7 +185,27 @@ i{
     padding: 6px 10px;
 }
 .fab {
-    margin-right: 0;
+    margin-right: 0px;
+
+}
+
+.logo-brand {
+    display: flex;
+}
+
+.blue-title {
+    background: #04a9f4;
+}
+
+.linear-colour {
+    font-size: 40px;      
+    background:-moz-linear-gradient(40rad, #ffc109 5%, #fc4f4f 100%); 
+    background: -webkit-linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%); 
+    background: linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
 }
 
 .logo {
@@ -211,7 +231,19 @@ a {
 }
 
 .bg-dark-customize {
-    background-color: #343a40a3;
+    background-color: #2b343b;
+}
+
+.orange-title {
+    background: #ff7800;
+}
+
+.green-title {
+    background: #1bbc9c;
+}
+
+.deepgreen-title {
+    background: #6bc950;
 }
 
 @media(min-width:800px){
