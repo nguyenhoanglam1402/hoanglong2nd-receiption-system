@@ -141,8 +141,9 @@ i{
 }
 
 .services-tag{
-    background-color:#4e4caf;
+    background-image: linear-gradient(40rad,#8653f2, #50bcfa);
     color:white;
+    font-weight: 600;
     padding:3px 5px;
     border-radius:5px;
 }
@@ -210,6 +211,25 @@ i{
     -moz-background-clip: text;
     background-clip: text;
    -webkit-text-fill-color:transparent;
+}
+
+.active {
+    background:-moz-linear-gradient(60rad, #ffc109 5%, #fc4f4f 100%) !important; 
+    background: -webkit-linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%) !important; 
+    background: linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%) !important;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text !important;
+    background-clip: text !important;
+   -webkit-text-fill-color:transparent !important;
+}
+
+.fa-facebook-f {
+    margin: auto;
+    vertical-align: middle;
+}
+
+.fab {
+    margin-top: 3px;
 }
 
 .logo {
