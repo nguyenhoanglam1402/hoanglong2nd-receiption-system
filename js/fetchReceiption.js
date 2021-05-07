@@ -30,6 +30,7 @@ $(document).ready(function () {
                         '</div>'+
                         '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
                         '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
+                        '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.createdDate+' VNĐ</b></p>'+
                         '<div class="notification" id="'+receiption.rid+'">'+
                           '<span class="warning-notification ">'+ remainingDateForPresentation +' NGÀY</span>'+
                           '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
