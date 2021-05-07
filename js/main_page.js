@@ -8,7 +8,7 @@ var dataset3 = new Clerk();
 
 setInterval(()=>{ 
     getDataFromWeek()
-},3000);
+},500);
 
 function getDataFromWeek(){
     var currentDate = getCurrentDate();
