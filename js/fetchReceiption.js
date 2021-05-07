@@ -42,7 +42,7 @@ $(document).ready(function () {
             $('.listCustomer').empty();
             $('.listCustomer').append(
                 '<li class="trending-list-item">'+
-                    '<i class="far fa-frown"></i>Không có dữ liệu ! '+
+                    '<i class="fas fa-frown"></i>Không có dữ liệu ! '+
                 '</li>');
         }
     }
