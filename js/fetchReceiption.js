@@ -7,7 +7,6 @@ $(document).ready(function () {
             url: "/server-side/getReceiptions.php",
             dataType:"json",
             success: function (response) {
-                remainingDateForPresentation = calculateDifferentDay(receiption.dueDate)
                 displayComponent(response);
             },
             error: function (log) {
