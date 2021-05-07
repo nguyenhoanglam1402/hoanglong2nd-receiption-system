@@ -38,7 +38,6 @@ function dataResolve(response){
         dataset2.resetData();
         dataset3.resetData();
         listOfDailyData = response;
-        console.log(listOfDailyData);
         listOfDailyData.forEach(daily => {
             daily.forEach(node => {
                 switch(node.title){
@@ -62,10 +61,6 @@ function dataResolve(response){
     else {
         console.log("Don't have any update !");
     }
-    console.log(dataset.getData());
-    console.log(dataset1.getData());
-    console.log(dataset2.getData());
-    console.log(dataset3.getData());
 }
 
 function getMonday(date) {
@@ -87,7 +82,6 @@ function getCurrentDate() {
 
 function drawChart(){
     var ctx = document.getElementById('chartView').getContext('2d');
-    console.log('Im here');
     new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
