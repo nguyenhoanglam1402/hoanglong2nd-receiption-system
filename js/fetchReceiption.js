@@ -13,7 +13,7 @@ $(document).ready(function () {
                 console.log("Unexpected error :\n > Title: " + log.status + "\n > Status: " + log.statusText);
             }
         });
-    }, 1000);
+    }, 3000);
 
     function displayComponent(response){
         console.log(response);
