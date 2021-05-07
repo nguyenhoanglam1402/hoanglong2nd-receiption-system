@@ -285,7 +285,8 @@ a {
     font-weight: 600;
     background-color: #ed4141;
     font-family: Gotham Pro,Proxima Nova,arial,serif;
-    margin-left: 10px;
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 26%);
+    margin-left: 5px;
     
 }
 
