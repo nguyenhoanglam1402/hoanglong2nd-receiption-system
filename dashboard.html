@@ -1,12 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="container">
+        <div class="chart-view-block shadow-sm bg-dark-customize">
+          <canvas id="chartView" heigh="550px">
+          </canvas>
+        </div>
+        <div class="detail-block" id="detail-block">
+          <div class="column">
+            <div class="recommend-block shadow-sm bg-dark-customize">
+              <div class="title-bar shadow-sm revenue-bar blue-title">
+                <h1>
+                  NHẬN ĐỊNH TỔNG QUAN
+                </h1>
+              </div>
+              <ul>
+                <li class="list-detail"><a class="link-detail" id="studio-index" href="#">Khách hình phòng tăng mạnh <b>(10%)</b></a></li>
+                <li class="list-detail"><a class="link-detail" id="personal-picture-index" href="#">Khách hình thẻ giảm nhẹ <b>(-5%)</b></a></li>
+                <li class="list-detail"><a class="link-detail" id="dress-index" href="#">Khách thuê đồ cưới tăng nhẹ <b>(2%)</b></a></li>
+                <li class="list-detail"><a class="link-detail" id="product-index" href="#">Khách mâm quả giảm sâu <b>(-15%)</b></a></li>
+              </ul>
+            </div>
+            <div class="revenue-list shadow-sm bg-dark-customize">
+              <div class="title-bar shadow-sm revenue-bar green-title">
+                <h1>
+                  TỔNG DOANH THU
+                </h1>
+              </div>
+              <ul class="non-list-type">
+                <li class="customer-item">Không có dữ liệu !</li>
+              </ul>
+            </div>
+            <div class="trending-list shadow-sm bg-dark-customize">
+              <div class="title-bar shadow-sm revenue-bar deepgreen-title">
+                <h1>
+                  XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
+                </h1>
+              </div>
+              <ul class="non-list-type">
+                <li class = "trending-list-item">Nothing here !</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="customer-list shadow-sm bg-dark-customize">
+              <div class="title-bar shadow-sm revenue-bar orange-title">
+                <h1>
+                  KHÁCH HÀNG ĐANG ĐỢI
+                </h1>
+              </div>
+              <ul class="listCustomer">
+                  <li class = "trending-list-item">
+                  <i class="fas fa-cloud-download-alt"></i>
+                  Đang tải dữ liệu... 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="./js/fetchReceiption.js"></script>
+      <script src="./js/effect.js"></script>
+      <script src="./js/clerk.js"></script>
+      <script src="./js/customer_item_process.js"></script>
+      <script src="./js/main_page.js"></script>
+</div>

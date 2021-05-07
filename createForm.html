@@ -1,69 +1,49 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Tạo biên lai</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="./images/image_for_page/bootstrap-logo.svg" type="image/svg" sizes="96x96">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/CreateFrom.css">
-  </head>
-  <body>
-    <div class="container">
-        <div class="form-recieption shadow-sm">
-            <form action="" method="post">
-                <h1 class="form-receiption-label">TẠO BIÊN LAI</h1>
-                <div class="form-group">
-                  <label for="">Tên khách hàng</label>
-                  <input type="text" class="form-control shadow-sm" name="" id="customer-name-input" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
-                  <small id="helpId" class="form-text text-muted">Tên khách hàng dùng để định danh khách hàng và tuyệt đối không được bỏ trống</small>
-                </div>
-                <div class="form-group">
-                  <label for="">Loại hình dịch vụ</label>
-                  <select class="form-control shadow-sm" name="" id="type-service-selector">
-                    <option value="Áo cưới (Cô dâu / Chú rể)">Cho thuê áo cưới/ trang phục đi họ</option>
-                    <option value="Ảnh cưới">Chụp ảnh cưới</option>
-                    <option value="Ảnh Studio (Hình phòng)">Chụp ảnh hình phòng (Ảnh Studio)</option>
-                    <option value="Mâm quả cưới">Đặt mâm ngũ quả</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="">Chi tiết biên lai</label>
-                  <textarea class="form-control shadow-sm" name="" id="description-input" rows="3" placeholder="Chi tiết thêm"></textarea>
-                  <small id="helpId" class="form-text text-muted">Mô tả chi tiết về yêu cầu của khách hàng</small>
-                </div>
-                <div class="form-group">
-                    <label for="">Thành tiền (VND)</label>
-                    <input class="form-control shadow-sm" type="number" name="total-price" id="total-money-input" placeholder="Tổng tiền ( ví dụ : 300000)">
-                </div>
-                <div class="form-group">
-                    <label for="">Đặt cọc (VND)</label>
-                    <input class="form-control shadow-sm" type="number" name="price" id="deposit-input" value="" placeholder="Số tiền đã đặt cọc ( ví dụ: 100.000)">
-                    <small id="helpId" class="form-text text-muted">Số tiền đặt cọc trước của khách hàng không nên bỏ trống</small>
-                </div>
-                <div class="form-group">
-                    <label for="">Ngày hẹn dự kiến</label>
-                    <input class="form-control shadow-sm" type="date" name="" id="datetime-input" >
-                </div>
-                <div class="form-group">
-                  <label for="">Số điện thoại khách hàng</label>
-                  <input class="form-control shadow-sm" type="number" name="phone-number" id="phonenumber" value="" placeholder="Nhập số điện thoại (ví dụ: 0935145948)">
-                </div>
-                <div class="form-group" id="button-form-group">
-                    <button type="button" class="btn btn-primary button shadow-sm" id="send-button">Gửi biên lai</button>
-                    <button type="button" class="btn btn-danger button shadow-sm" id="cancel-button">Hủy biên lai</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/send_data.js"></script>
-  </body>
-</html>
+<link rel="stylesheet" type="text/css" href="css/CreateFrom.css" >
+<div class="container">
+  <div class="form-recieption shadow-sm">
+      <form action="" method="post">
+          <h1 class="form-receiption-label">TẠO BIÊN LAI</h1>
+          <div class="form-group">
+            <label for="">Tên khách hàng</label>
+            <input type="text" class="form-control shadow-sm" name="" id="customer-name-input" aria-describedby="helpId" placeholder="Tên khách hàng ( ví dụ: Tôn Nữ Qúy Ngọc,..)">
+            <small id="helpId" class="form-text text-muted">Tên khách hàng dùng để định danh khách hàng và tuyệt đối không được bỏ trống</small>
+          </div>
+          <div class="form-group">
+            <label for="">Loại hình dịch vụ</label>
+            <select class="form-control shadow-sm" name="" id="type-service-selector">
+              <option value="Áo cưới (Cô dâu / Chú rể)">Cho thuê áo cưới/ trang phục đi họ</option>
+              <option value="Ảnh cưới">Chụp ảnh cưới</option>
+              <option value="Ảnh Studio (Hình phòng)">Chụp ảnh hình phòng (Ảnh Studio)</option>
+              <option value="Mâm quả cưới">Đặt mâm ngũ quả</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Chi tiết biên lai</label>
+            <textarea class="form-control shadow-sm" name="" id="description-input" rows="3" placeholder="Chi tiết thêm"></textarea>
+            <small id="helpId" class="form-text text-muted">Mô tả chi tiết về yêu cầu của khách hàng</small>
+          </div>
+          <div class="form-group">
+              <label for="">Thành tiền (VND)</label>
+              <input class="form-control shadow-sm" type="number" name="total-price" id="total-money-input" placeholder="Tổng tiền ( ví dụ : 300000)">
+          </div>
+          <div class="form-group">
+              <label for="">Đặt cọc (VND)</label>
+              <input class="form-control shadow-sm" type="number" name="price" id="deposit-input" value="" placeholder="Số tiền đã đặt cọc ( ví dụ: 100.000)">
+              <small id="helpId" class="form-text text-muted">Số tiền đặt cọc trước của khách hàng không nên bỏ trống</small>
+          </div>
+          <div class="form-group">
+              <label for="">Ngày hẹn dự kiến</label>
+              <input class="form-control shadow-sm" type="date" name="" id="datetime-input" >
+          </div>
+          <div class="form-group">
+            <label for="">Số điện thoại khách hàng</label>
+            <input class="form-control shadow-sm" type="number" name="phone-number" id="phonenumber" value="" placeholder="Nhập số điện thoại (ví dụ: 0935145948)">
+          </div>
+          <div class="form-group" id="button-form-group">
+              <button type="button" class="btn btn-primary button shadow-sm" id="send-button">Gửi biên lai</button>
+              <button type="button" class="btn btn-danger button shadow-sm" id="cancel-button">Hủy biên lai</button>
+          </div>
+      </form>
+  </div>
+</div>
+<script src="js/send_data.js"></script>

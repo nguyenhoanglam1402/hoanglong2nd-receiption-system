@@ -136,6 +136,10 @@ i{
     margin-top:2px;
 }
 
+.page-content {
+    width: -webkit-fill-available;
+}
+
 .services-tag{
     background-color:#4e4caf;
     color:white;

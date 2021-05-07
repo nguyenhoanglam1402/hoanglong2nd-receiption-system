@@ -1,4 +1,4 @@
-<?php require './server-side/connect.php';?>
+<!-- <?php require './server-side/connect.php';?> -->
 <html lang="en">
   <head>
     <title>Hoang Long II Kit</title>
@@ -11,6 +11,12 @@
     <link rel="shortcut icon" href="./images/image_for_page/download.png" type="image/png" sizes="96x96">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css" >
+
+    <!-- Script and CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="navbar-session">
@@ -29,7 +35,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php"><i class="fas fa-tasks"></i>Quản lý chung</a>
+                    <a class="nav-link" aria-current="page" href="dashboard.html"><i class="fas fa-tasks"></i>Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" href="createForm.html" aria-current="page">
@@ -54,65 +60,11 @@
         </div>
     </nav>
     </div>
-    <div class="container">
-      <div class="chart-view-block shadow-sm bg-dark-customize">
-        <canvas id="chartView" heigh="550px">
-        </canvas>
-      </div>
-      <div class="detail-block" id="detail-block">
-        <div class="column">
-          <div class="recommend-block shadow-sm bg-dark-customize">
-            <div class="title-bar shadow-sm revenue-bar blue-title">
-              <h1>
-                NHẬN ĐỊNH TỔNG QUAN
-              </h1>
-            </div>
-            <ul>
-              <li class="list-detail"><a class="link-detail" id="studio-index" href="#">Lượng khách hình phòng tăng mạnh <b>(10%)</b></a></li>
-              <li class="list-detail"><a class="link-detail" id="personal-picture-index" href="#">Lượng khách hình thẻ giảm nhẹ <b>(-5%)</b></a></li>
-              <li class="list-detail"><a class="link-detail" id="dress-index" href="#">Lượng khách thuê đồ cưới tăng nhẹ <b>(2%)</b></a></li>
-              <li class="list-detail"><a class="link-detail" id="product-index" href="#">Lượng khách mâm quả giảm sâu <b>(-15%)</b></a></li>
-            </ul>
-          </div>
-          <div class="revenue-list shadow-sm bg-dark-customize">
-            <div class="title-bar shadow-sm revenue-bar green-title">
-              <h1>
-                TỔNG DOANH THU
-              </h1>
-            </div>
-            <ul class="non-list-type">
-              <li class="customer-item">Không có dữ liệu !</li>
-            </ul>
-          </div>
-          <div class="trending-list shadow-sm bg-dark-customize">
-            <div class="title-bar shadow-sm revenue-bar deepgreen-title">
-              <h1>
-                XU HƯỚNG DỊCH VỤ NỔI BẬC TRONG TUẦN
-              </h1>
-            </div>
-            <ul class="non-list-type">
-              <li class = "trending-list-item">Nothing here !</li>
-            </ul>
-          </div>
-        </div>
-        <div class="column">
-          <div class="customer-list shadow-sm bg-dark-customize">
-            <div class="title-bar shadow-sm revenue-bar orange-title">
-              <h1>
-                KHÁCH HÀNG ĐANG ĐỢI
-              </h1>
-            </div>
-            <ul class="listCustomer">
-	            <li class = "trending-list-item">
-                <i class="fas fa-cloud-download-alt"></i>
-                Đang tải dữ liệu... 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="page-content">
     </div>
-    <footer class="bg-dark-customize text-center text-white">
+  </body>
+  <script src="js/navigationbar_click.js"></script>
+  <footer class="bg-dark-customize text-center text-white">
       <h2>PHẢN HỒI HỆ THỐNG LIÊN HỆ</h2>
       <!-- Grid container -->
       <div class="container p-2 pb-0">
@@ -142,18 +94,4 @@
       
       <!-- Copyright -->
 </footer>
-    <!-- Optional JavaScript -->
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/fetchReceiption.js"></script>
-    <script src="./js/effect.js"></script>
-    <script src="./js/clerk.js"></script>
-    <script src="./js/customer_item_process.js"></script>
-    <script src="./js/main_page.js"></script>
-  </body>
 </html>
