@@ -37,6 +37,7 @@ $(document).ready(function () {
                   '</li>'
                 );
                 setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
+
             });
         } else if(response.length == 0){
             $('.listCustomer').empty();
@@ -58,6 +59,8 @@ $(document).ready(function () {
         else{
             $("#" + rid).addClass("long-term");
         }
+
+        $(".warning-notification").val(remainingDate);
     }
 
     function calculateDifferentDay(dateEnd){
