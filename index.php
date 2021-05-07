@@ -1,4 +1,4 @@
-<!-- <?php require './server-side/connect.php';?> -->
+<?php require './server-side/connect.php';?>
 <html lang="en">
   <head>
     <title>Hoang Long II Kit</title>
