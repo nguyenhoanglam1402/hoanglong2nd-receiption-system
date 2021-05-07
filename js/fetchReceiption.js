@@ -39,8 +39,8 @@ $(document).ready(function () {
                 setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
             });
         } else if(response.length == 0){
-            $('listCustomer').empty();
-            $('listCustomer').append('<li class="trending-list-item">Không có dữ liệu</li>');
+            $('.listCustomer').empty();
+            $('.listCustomer').append('<li class="trending-list-item">Không có dữ liệu</li>');
         }
     }
 
