@@ -1,12 +1,13 @@
 $(document).ready(function () {
     var listOfReceiptions = [];
-    var remainingDate;
+    var remainingDateForPresentation;
     setInterval(() => {
         $.ajax({
             type: "POST",
             url: "/server-side/getReceiptions.php",
             dataType:"json",
             success: function (response) {
+                remainingDateForPresentation = calculateDifferentDay(receiption.dueDate)
                 displayComponent(response);
             },
             error: function (log) {
@@ -21,6 +22,7 @@ $(document).ready(function () {
             listOfReceiptions = response;
             $('.listCustomer').empty();
             listOfReceiptions.forEach(receiption => {
+                remainingDateForPresentation = Math.round(calculateDifferentDay(receiption.dueDate));
                 $('.listCustomer').append(
                     '<li class="customer-item">'+
                     '<div class="customer-item-card shadow-sm dark-tab shadow-sm">'+
@@ -30,14 +32,14 @@ $(document).ready(function () {
                         '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
                         '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
                         '<div class="notification" id="'+receiption.rid+'">'+
-                          '<span class="warning-notification ">'+ remainingDate +' NGÀY</span>'+
+                          '<span class="warning-notification ">'+ remainingDateForPresentation +' NGÀY</span>'+
                           '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
                         '</div>'+
                     '</div>'+
                   '</li>'
                 );
-                setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
-
+                setStatusOfCustomerCard(receiption.rid);
+                
             });
         } else if(response.length == 0){
             $('.listCustomer').empty();
@@ -48,8 +50,8 @@ $(document).ready(function () {
         }
     }
 
-    function setStatusOfCustomerCard(dueDate, rid){
-        remainingDate = calculateDifferentDay(dueDate);
+    function setStatusOfCustomerCard(rid){
+        var remainingDate = remainingDateForPresentation;
         if( remainingDate >= 3 && remainingDate <=7){
             $("#" + rid).addClass("warning-time");
         }
@@ -59,8 +61,6 @@ $(document).ready(function () {
         else{
             $("#" + rid).addClass("long-term");
         }
-
-        $(".warning-notification").val(remainingDate);
     }
 
     function calculateDifferentDay(dateEnd){

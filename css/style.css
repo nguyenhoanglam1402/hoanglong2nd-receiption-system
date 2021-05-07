@@ -172,15 +172,15 @@ i{
 }
 
 .dangerous-time{
-    background-image: linear-gradient(to left, #ff000049 , #ff000017);
+    background-image: linear-gradient(to left, #ff000049 , #ff000017) !important;
 }
 
 .warning-time{
-    background-image: linear-gradient(to left, #ff77006e , #ff77001f);
+    background-image: linear-gradient(to left, #ff77006e , #ff77001f) !important;
 }
 
 .long-term{
-    background-image: linear-gradient(to left, #04a8f44b , #04a8f411);
+    background-image: linear-gradient(to left, #04a8f44b , #04a8f411) !important;
 }
 
 .btn-floating{
