@@ -24,7 +24,6 @@ function getDataFromWeek(){
         dataType: "json",
         success: function (response) {
             dataResolve(response);
-            console.log(response);
         }
     });
 }
