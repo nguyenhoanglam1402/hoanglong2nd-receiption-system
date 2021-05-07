@@ -186,10 +186,6 @@ i{
     height: 40px;
     padding: 6px 10px;
 }
-.fab {
-    margin-right: 0px;
-
-}
 
 .logo-brand {
     display: flex;
@@ -286,6 +282,8 @@ a {
     font-family: Gotham Pro,Proxima Nova,arial,serif;;
     
 }
+
+
 
 @media(min-width:800px){
     .chart-view-block{
