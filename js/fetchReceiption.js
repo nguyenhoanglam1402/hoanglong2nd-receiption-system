@@ -40,7 +40,7 @@ $(document).ready(function () {
             });
         } else if(response.length == 0){
             $('listCustomer').empty();
-            $('listCustomer').append('<p class="trending-list-item">Không có dữ liệu</p>');
+            $('listCustomer').append('<li class="trending-list-item">Không có dữ liệu</li>');
         }
     }
 

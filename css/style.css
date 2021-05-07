@@ -290,7 +290,7 @@ a {
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;
-        height: 15%;
+        height: fit-content;
     }
 
     .nav-item {
@@ -324,7 +324,7 @@ a {
 
     .chart-view-block{
         margin: 5px auto;
-        height: 55%;
+        height: fit-content;
     }
 
     .nav-link{
