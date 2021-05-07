@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var listOfReceiptions = [];
+    var remainingDate;
     setInterval(() => {
         $.ajax({
             type: "POST",
@@ -22,15 +23,18 @@ $(document).ready(function () {
             listOfReceiptions.forEach(receiption => {
                 $('.listCustomer').append(
                     '<li class="customer-item">'+
-                        '<div class="customer-item-card shadow-sm" id="'+receiption.rid+'">'+
-                            '<div class="title">'+
-                                '<span class="customer-name-tag">'+receiption.name+'</span>'+
-                                '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
-                            '</div>'+
-                            '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
-                            '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
+                    '<div class="customer-item-card shadow-sm dark-tab shadow-sm">'+
+                        '<div class="title">'+
+                            '<span class="customer-name-tag">'+receiption.name+'</span>'+
                         '</div>'+
-                    '</li>'
+                        '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
+                        '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
+                        '<div class="notification" id="'+receiption.rid+'">'+
+                          '<span class="warning-notification ">'+ remainingDate +' NGÀY</span>'+
+                          '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
+                        '</div>'+
+                    '</div>'+
+                  '</li>'
                 );
                 setStatusOfCustomerCard(receiption.dueDate, receiption.rid);
             });
@@ -41,7 +45,7 @@ $(document).ready(function () {
     }
 
     function setStatusOfCustomerCard(dueDate, rid){
-        var remainingDate = calculateDifferentDay(dueDate);
+        remainingDate = calculateDifferentDay(dueDate);
         if( remainingDate >= 3 && remainingDate <=7){
             $("#" + rid).addClass("warning-time");
         }

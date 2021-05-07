@@ -16,22 +16,22 @@ body {
 }
 
 
-
 .btn-outline{
     font-weight: 600;
     color:#fd6c3e;
-    border: 1.5px solid #fea718a8;
+    background-color: #384047;
 }
 
 
 .btn-outline:hover{
     font-weight: 600;
     color:#ffffff;
-    background: linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%);;
+    background: linear-gradient(40rad, #ffc109 5%,#fc4f4f 100%);
+    border: 0;
 }
 
 .chart-view-block{
-    border-radius: 10px;
+    border-radius: 5px;
     padding:1.5%;
     background-color: #ffffff;
 }
@@ -54,7 +54,8 @@ h1{
     text-align: center;
     font-weight: 600;
     padding: 5px 0px;
-    color:#fdfdfd;;
+    color:#fdfdfd;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;
 }
 
 .form-receiption-label {
@@ -66,7 +67,8 @@ h1{
 
 .link-detail {
     text-decoration:none;
-    color: rgb(255, 255, 255);
+    color: #d5d6d7;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;
 }
 
 .list-detail {
@@ -166,15 +168,15 @@ i{
 }
 
 .dangerous-time{
-    background-color: #fc1d1275;
+    background-image: linear-gradient(to left, #ff000049 , #ff000017);
 }
 
 .warning-time{
-    background-color: #fc891275;
+    background-image: linear-gradient(to left, #ff77006e , #ff77001f);
 }
 
 .long-term{
-    background-color: #1275fc75;
+    background-image: linear-gradient(to left, #04a8f44b , #04a8f411);
 }
 
 .btn-floating{
@@ -191,6 +193,7 @@ i{
 
 .logo-brand {
     display: flex;
+    place-items: center;
 }
 
 .blue-title {
@@ -216,18 +219,21 @@ h2 {
     font-size: 1.2em;
     padding-top: 20px;
     margin-top: 15px;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;
 }
 
 ul {
-    color: white;
+    color: #d5d6d7;
 }
 
 li {
-    color: white;
+    color: #d5d6d7;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;
 }
 
 a {
-    color: white;
+    color: #d5d6d7;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;
 }
 
 .bg-dark-customize {
@@ -246,10 +252,49 @@ a {
     background: #6bc950;
 }
 
+.navbar-nav {
+    margin: auto;
+}
+
+.form-control {
+    background-color: #384047;
+    border: none;
+}
+
+.dark-tab {
+    background-color: #384047;
+}
+
+.bg-dark {
+    background-color: #2b343b !important;
+}
+
+.notification {
+    display: flex;
+    border-top: 1.5px solid #2b343b;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.warning-notification {
+    border: 1px solid #ed4141;
+    border-radius: 50px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: #ed4141;
+    font-family: Gotham Pro,Proxima Nova,arial,serif;;
+    
+}
+
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;
         height: 15%;
+    }
+
+    .nav-item {
+        margin: 0 10px ;
     }
     
     .column{

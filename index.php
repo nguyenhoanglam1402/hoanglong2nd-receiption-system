@@ -1,5 +1,4 @@
 <?php require './server-side/connect.php';?>
-<!doctype html>
 <html lang="en">
   <head>
     <title>Hoang Long II Kit</title>
