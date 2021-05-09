@@ -1,4 +1,4 @@
-<?php require './server-side/connect.php';?>
+<!-- <?php require './server-side/connect.php';?> -->
 <html lang="en">
   <head>
     <title>Hoang Long II Kit</title>
@@ -35,7 +35,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="dashboard.html"><i class="fas fa-tasks"></i>Quản lý chung</a>
+                    <a class="nav-link" aria-current="page" href="dashboard.html"><i class="far fa-desktop-alt"></i>Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link" href="createForm.html" aria-current="page">
@@ -44,7 +44,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-box-open"></i>Quản lý biên lai</a>
+                    <a class="nav-link" href="receiption-management.html"><i class="fas fa-box-open"></i>Quản lý biên lai</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-info"></i>Giới thiệu</a>
@@ -60,8 +60,8 @@
         </div>
     </nav>
     </div>
-    <div class="page-content">
-    </div>
+    <main class="page-content">
+    </main>
   </body>
   <script src="js/navigationbar_click.js"></script>
   <footer class="bg-dark-customize text-center text-white">

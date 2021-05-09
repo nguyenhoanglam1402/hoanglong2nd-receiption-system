@@ -38,7 +38,6 @@ $(document).ready(function () {
                   '</li>'
                 );
                 setStatusOfCustomerCard(receiption.rid);
-                
             });
         } else if(response.length == 0){
             $('.listCustomer').empty();

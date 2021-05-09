@@ -316,6 +316,10 @@ a {
     padding-right: 10px;
 }
 
+footer {
+    clear: both;
+}
+
 @media(min-width:800px){
     .chart-view-block{
         margin: 5px auto;
