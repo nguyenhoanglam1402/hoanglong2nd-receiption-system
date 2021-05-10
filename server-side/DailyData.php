@@ -13,10 +13,10 @@ class DailyData
     public function setNodes($date, $connect)
     {
         $listOfTitles = [
-            "Ảnh cưới",
-            "Mâm quả cưới",
-            "Ảnh Studio (Hình phòng)",
-            "Áo cưới (Cô dâu / Chú rể)"
+            "Chụp ảnh cưới",
+            "Đặt mâm quả cưới",
+            "Làm đám cưới",
+            "Áo cưới/ trang phục"
         ];
         for($indexOfNode = 0; $indexOfNode < count($listOfTitles); $indexOfNode++) {
             //query to select amount of each node.

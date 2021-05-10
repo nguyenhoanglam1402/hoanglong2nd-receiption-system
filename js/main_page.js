@@ -38,7 +38,6 @@ function dataResolve(response){
         listOfDailyData = response;
         listOfDailyData.forEach(daily => {
             daily.forEach(node => {
-                console.log(node);
                 switch (node.title) {
                     case "Chụp ảnh cưới":
                         dataset.addData(node.amount);
