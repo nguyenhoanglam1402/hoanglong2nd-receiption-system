@@ -39,16 +39,16 @@ function dataResolve(response){
         listOfDailyData.forEach(daily => {
             daily.forEach(node => {
                 switch(node.title){
-                    case "Ảnh cưới":
+                    case "Chụp ảnh cưới":
                         dataset.addData(node.amount);
                         break;
-                    case "Mâm quả cưới":
+                    case "Đặt mâm quả cưới":
                         dataset1.addData(node.amount);
                         break;
-                    case "Ảnh Studio (Hình phòng)":
+                    case "Làm đám cưới":
                         dataset2.addData(node.amount);
                         break;
-                    case "Áo cưới (Cô dâu / Chú rể)":
+                    case "Áo cưới/ trang phục":
                         dataset3.addData(node.amount);
                         break;
                 }
@@ -88,25 +88,25 @@ function drawChart(){
             labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],
             datasets: [
                 {
-                    label: 'Ảnh cưới',
+                    label: 'Chụp ảnh cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#007bff',
                     data: dataset.getData()
                 },
                 {
-                    label: 'Thuê áo cưới',
+                    label: 'Thuê áo cưới/trang phục',
                     backgroundColor: '#fff0',
                     borderColor: '#009688',
                     data: dataset3.getData()
                 },
                 {
-                    label: 'Hình phòng (Studio)',
+                    label: 'Làm đám cưới',
                     backgroundColor: '#fff0',
                     borderColor: '#dc3545',
                     data: dataset2.getData()
                 },
                 {
-                    label: 'Lượng đặt mâm quả',
+                    label: 'Mâm quả',
                     backgroundColor: '#fff0',
                     borderColor: '#fd7e14',
                     data: dataset1.getData()
