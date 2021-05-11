@@ -19,7 +19,7 @@ $(document).ready(function () {
         if (listOfReceiptionsItems.length != response.length) {
             listOfReceiptionsItems = response;
             listOfReceiptionsItems.forEach(item => {
-                createTaskBlock();
+                createTaskBlock(item);
                 addEffectAndColor()
             });
         }
