@@ -21,7 +21,7 @@ body {
 
 .custom-column {
   padding: 20px 0px;
-  height: 500px;
+  height: fit-content;
   width: 425px;
 }
 
