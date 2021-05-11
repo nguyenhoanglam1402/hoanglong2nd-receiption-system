@@ -7,7 +7,7 @@ $query = "SELECT rid, customer_name, phone_number, description,
             expected_delivery_date, title, deposit, rest_amount, is_done, created_date
             FROM receiption_product_service 
             iNNER JOIN customer ON cid=cus_id
-            ORDER BY expected_delivery_date ASC LIMIT".$_POST["amount"];
+            ORDER BY expected_delivery_date ASC LIMIT $_POST['amount']";
 
 $result = pg_query($connect, $query);
 
