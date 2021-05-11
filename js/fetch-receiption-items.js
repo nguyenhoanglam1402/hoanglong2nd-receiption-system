@@ -5,7 +5,7 @@ $(document).ready(function () {
     function getDataFromCloud() {
         $.ajax({
             type: "POST",
-            url: "./getReceiptions.php",
+            url: "./server-side/getReceiptions.php",
             dataType: "json",
             success: function (response) {
                 displayReceiptionItem(response);
