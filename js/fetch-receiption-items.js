@@ -1,8 +1,7 @@
 $(document).ready(function () {
     var listOfReceiptionsItems = [];
 
-    setInterval(getDataFromCloud(), 1000);
-    function getDataFromCloud() {
+    setInterval(() => {
         $.ajax({
             type: "POST",
             url: "./server-side/getReceiptions.php",
@@ -14,7 +13,7 @@ $(document).ready(function () {
                 displayReceiptionItem(response);
             }
         });
-    }
+    }, 1000);
 
     function displayReceiptionItem(response) {
         if (listOfReceiptionsItems.length != response.length) {
