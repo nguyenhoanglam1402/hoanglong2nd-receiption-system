@@ -79,26 +79,26 @@ $(document).ready(function () {
         var remainingDate = calculateDifferentDay(item.dueDate);
 
         if (remainingDate >= 7) {
-            $("#" + item.rid + ".notification-line").addClass("long-term");
+            $("#" + item.rid + " .notification-line").addClass("long-term");
         }
         else if (remainingDate >= 3 && remainingDate < 7) {
-            $("#" + item.rid + ".notification-line").addClass("warning-time");
+            $("#" + item.rid + " .notification-line").addClass("warning-time");
         }
         else {
-            $("#" + item.rid + ".notification-line").addClass("dangerous-time");
+            $("#" + item.rid + " .notification-line").addClass("dangerous-time");
         }
         switch (item.typeOfService) {
             case "Làm đám cưới":
-                $("#" + item.rid + ".light-line").addClass("linear-blue");
+                $("#" + item.rid + " .light-line").addClass("linear-blue");
                 break;
             case "Chụp ảnh cưới":
-                $("#" + item.rid + ".light-line").addClass("linear-orange");
+                $("#" + item.rid + " .light-line").addClass("linear-orange");
                 break;
             case "Đặt mâm quả cưới":
-                $("#" + item.rid + ".light-line").addClass("linear-light-green");
+                $("#" + item.rid + " .light-line").addClass("linear-light-green");
                 break;
             case "Áo cưới/ trang phục":
-                $("#" + item.rid + ".light-line").addClass("linear-green");
+                $("#" + item.rid + " .light-line").addClass("linear-green");
                 break;
         }
     }
