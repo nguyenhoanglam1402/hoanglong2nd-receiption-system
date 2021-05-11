@@ -32,7 +32,7 @@ $(document).ready(function () {
     function createTaskBlock(item) {
         var title = ["marrie-service", "photographer-service", "item-service","clothes-service"];
         var index = 0;
-        switch (item.title) {
+        switch (item.typeOfService) {
             case "Làm đám cưới":
                 index = 0;
                 break;
