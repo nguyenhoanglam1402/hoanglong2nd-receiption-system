@@ -16,7 +16,7 @@ $(document).ready(function () {
     }, 1000);
 
     function displayReceiptionItem(response) {
-        if (listOfReceiptionsItems.length != response.length) {
+        if ((listOfReceiptionsItems.length != response.length) && response.length !=0) {
             cleanColumn();
             listOfReceiptionsItems = response;
             listOfReceiptionsItems.forEach(item => {
@@ -25,8 +25,18 @@ $(document).ready(function () {
             });
         }
         else if (response.length == 0) {
+            cleanDisplay();
+            rebuildDisplay();
         }
         
+    }
+
+    function cleanDisplay() {
+        $(".column-container").remove();
+    }
+
+    function rebuildDisplay() {
+        $(".page-content").append('<div class="column-container"></div>');
     }
 
     function cleanColumn() {
