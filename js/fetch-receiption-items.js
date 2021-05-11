@@ -17,16 +17,23 @@ $(document).ready(function () {
 
     function displayReceiptionItem(response) {
         if (listOfReceiptionsItems.length != response.length) {
+            cleanColumn();
             listOfReceiptionsItems = response;
             listOfReceiptionsItems.forEach(item => {
                 createTaskBlock(item);
                 addEffectAndColor(item)
             });
         }
-        else {
-
+        else if (response.length == 0) {
         }
         
+    }
+
+    function cleanColumn() {
+        $(".marrie-service").empty();
+        $(".photographer-service").empty();
+        $(".item-service").empty();
+        $(".clothes-service").empty();
     }
 
     function createTaskBlock(item) {
