@@ -38,7 +38,7 @@
                     <a class="nav-link" aria-current="page" href="dashboard.html"><i class="far fa-desktop-alt"></i>Quản lý chung</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link" href="createForm.html" aria-current="page">
+                    <a class="nav-link" href="create-form.html" aria-current="page">
                     <i class="fas fa-receipt"></i>
                       Tạo biên lai
                     </a>

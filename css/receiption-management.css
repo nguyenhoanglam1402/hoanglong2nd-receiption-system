@@ -1,198 +1,219 @@
 body {
-    background-color: #1e272e;
+  background-color: #1e272e;
 }
 
 .column-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: fit-content;
 }
 
 .amount {
-    color: #ABAEB0;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 0;
-    text-align: center;
-    height: fit-content;
-    place-self: center;
+  color: #abaeb0;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  height: fit-content;
+  place-self: center;
 }
 
 .custom-column {
-    padding: 20px 0px;
-    height: 500px;
-    width: 425px;
+  padding: 20px 0px;
+  height: 500px;
+  width: 425px;
 }
 
 .tag-header {
-    width: auto;
-    height: 74px;
-    border-radius: 5px;
-    background-color: #2B343B;
+  width: auto;
+  height: 74px;
+  border-radius: 5px;
+  background-color: #2b343b;
 }
 
 .header-content {
-    display: flex;
-    height: -webkit-fill-available;
-    padding: 0px 15px 5px 10px;
+  display: flex;
+  height: -webkit-fill-available;
+  padding: 0px 15px 5px 10px;
 }
 
 .top-border {
-    width: auto;
-    height: 4px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  width: auto;
+  height: 4px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .circle-outline {
-    width: 52px;
-    height: 52px;
-    border-radius: 50px;
-    place-self: center;
-    display: flex;
-    justify-content: center;
-    place-content: middle;
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+  place-self: center;
+  display: flex;
+  justify-content: center;
+  place-content: middle;
 }
 
 .header-text {
-    font-family: Gotham Pro,Proxima Nova,arial,serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ABAEB0;
-    align-self: center;
-    padding: 10px 0px 0px 15px;
+  font-family: Gotham Pro, Proxima Nova, arial, serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #abaeb0;
+  align-self: center;
+  padding: 10px 0px 0px 15px;
 }
 
 .orange-outline {
-    border: 2.5px solid#FF7800 ;
+  border: 2.5px solid#FF7800;
 }
 
 .blue-outline {
-    border: 2.5px solid #04A9F4;
+  border: 2.5px solid #04a9f4;
 }
 
 .light-green-outline {
-    border: 2.5px solid #1BBC9C;
+  border: 2.5px solid #1bbc9c;
 }
 
 .green-outline {
-    border: 2.5px solid #6BC950;
+  border: 2.5px solid #6bc950;
 }
 
 .blue {
-    background-color: #04A9F4;
+  background-color: #04a9f4;
 }
 
 .orange {
-    background-color: #FF7800;
+  background-color: #ff7800;
 }
 
 .light-green {
-    background-color: #1BBC9C;
+  background-color: #1bbc9c;
 }
 
 .green {
-    background-color: #6BC950;
+  background-color: #6bc950;
 }
 
 .linear-blue {
-    background-image: linear-gradient(to bottom, #04A9F4, #04a8f425);
+  background-image: linear-gradient(to bottom, #04a9f4, #04a8f425);
+}
+
+.linear-orange {
+  background-image: linear-gradient(to bottom, #ff7800, #ff77002d);
+}
+
+.linear-light-green {
+  background-image: linear-gradient(to bottom, #1bbc9c, #1bbc9c38);
+}
+
+.linear-green {
+  background-image: linear-gradient(to bottom, #6bc950, #6ac9501f);
 }
 
 .task-tab {
-    display: flex;
-    flex-direction: row;
-    background-color: #2B343B;
-    border-radius: 5px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #2b343b;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .content-container {
-    flex: 1;
-    width: auto;
+  flex: 1;
+  width: auto;
 }
 
 .tab-content {
-    padding: 10px 25px;
-    width: auto;
+  padding: 10px 25px;
+  width: auto;
 }
 
 .light-line {
-    width: 6px;
-    height: auto;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+  width: 6px;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .tab-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .created-date {
-    color:#ABAEB0;
-    font-size: 14px;
-    height: fit-content;
-    place-self: center;
-    padding: 5px 0;
-    margin-bottom: 8px;
-    font-family: Gotham Pro,Proxima Nova,arial,serif;
+  color: #abaeb0;
+  font-size: 14px;
+  height: fit-content;
+  place-self: center;
+  padding: 5px 0;
+  margin-bottom: 8px;
+  font-family: Gotham Pro, Proxima Nova, arial, serif;
 }
 
 .customer-name {
-    text-align: start;
-    text-transform: uppercase;
-    color: #ABAEB0;
-    width: fit-content;
+  text-align: start;
+  text-transform: uppercase;
+  color: #abaeb0;
+  width: fit-content;
 }
 
-.description-tag, .deposit-tag, .phone-tag {
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(171, 174, 176, 0.58);
-    text-align: start;
+.description-tag,
+.deposit-tag,
+.phone-tag {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(171, 174, 176, 0.58);
+  text-align: start;
 }
 
 .description-content {
-    padding-left: 14px;
-    color: #ABAEB0;
-    font-size: 14px;
+  padding-left: 14px;
+  color: #abaeb0;
+  font-size: 14px;
 }
 
 .deposit-block {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.deposit-tag, .deposit-value, .phone-tag, .phone-number {
-    display: inline-block;
-    width: fit-content;
-    margin: 0;
+.deposit-tag,
+.deposit-value,
+.phone-tag,
+.phone-number {
+  display: inline-block;
+  width: fit-content;
+  margin: 0;
 }
 
-.description-tag, .description-tag, .description-content, .phone-tag {
-    margin-bottom: 5px;
+.description-tag,
+.description-tag,
+.description-content,
+.phone-tag {
+  margin-bottom: 5px;
 }
 
-.deposit-value, .phone-number {
-    place-self: center;
-    padding-left: 10px;
-    color: #ABAEB0;
-    font-weight: 600;
+.deposit-value,
+.phone-number {
+  place-self: center;
+  padding-left: 10px;
+  color: #abaeb0;
+  font-weight: 600;
 }
 
 .notification-line {
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px 10px;
-    margin: 0px 3px 5px 3px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  margin: 0px 3px 5px 3px;
 }
 
 .due-date {
-    margin: 0;
-    width: fit-content;
-    float: inline-end;
-    color: #ABAEB0;
-    font-size: 14px;
+  margin: 0;
+  width: fit-content;
+  float: inline-end;
+  color: #abaeb0;
+  font-size: 14px;
 }
