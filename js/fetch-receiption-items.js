@@ -20,7 +20,7 @@ $(document).ready(function () {
             listOfReceiptionsItems = response;
             listOfReceiptionsItems.forEach(item => {
                 createTaskBlock(item);
-                addEffectAndColor()
+                addEffectAndColor(item)
             });
         }
         else {
@@ -66,7 +66,7 @@ $(document).ready(function () {
             '<p class="phone-number">' + item.phoneNumber + '</p>' +
             '</span>' +
             '</div>' +
-            '<div class="notification-line">' +
+            '<div class="notification-line" id="' + item.rid + '">' +
             '<p class="due-date">Ngày hẹn: ' + item.dueDate + '</p>' +
             '</div>' +
             '</div>' +
@@ -79,27 +79,27 @@ $(document).ready(function () {
         var remainingDate = calculateDifferentDay(item.dueDate);
 
         if (remainingDate >= 7) {
-            $(".notification-line").addClass("long-term");
+            $("#" + item.rid).addClass("long-term");
         }
         else if (remainingDate >= 3 && remainingDate < 7) {
-            $(".notification-line").addClass("warning-time");
+            $("#" + item.rid).addClass("warning-time");
         }
         else {
-            $(".notification-line").addClass("dangerous-time");
+            $("#" + item.rid).addClass("dangerous-time");
         }
         
-        switch (item.title) {
+        switch (item.typeOfService) {
             case "Làm đám cưới":
-                $(".light-line").addClass("linear-blue");
+                $("#" + item.rid).addClass("linear-blue");
                 break;
             case "Chụp ảnh cưới":
-                $(".light-line").addClass("linear-orange");
+                $("#" + item.rid).addClass("linear-orange");
                 break;
             case "Đặt mâm quả cưới":
-                $(".light-line").addClass("linear-light-green");
+                $("#" + item.rid).addClass("linear-light-green");
                 break;
             case "Áo cưới/ trang phục":
-                $(".light-line").addClass("linear-green");
+                $("#" + item.rid).addClass("linear-green");
                 break;
         }
     }
