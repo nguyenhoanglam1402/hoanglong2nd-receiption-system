@@ -6,6 +6,9 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "./server-side/getReceiptions.php",
+            data: {
+              amount: 30  
+            },
             dataType: "json",
             success: function (response) {
                 displayReceiptionItem(response);
