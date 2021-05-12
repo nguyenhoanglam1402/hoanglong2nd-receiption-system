@@ -45,6 +45,7 @@ $(document).ready(function () {
     function createTaskBlock(item) {
         var title = ["marrie-service", "photographer-service", "item-service","clothes-service"];
         var index = 0;
+        var depositCurrencyFormat = new Intl.NumberFormat({ style: 'currency', currency: 'JPY' }).format(item.deposit);
         switch (item.typeOfService) {
             case "Làm đám cưới":
                 index = 0;
@@ -72,7 +73,7 @@ $(document).ready(function () {
             '<p class="description-content">' + item.description + '</p>' +
             '<span class="deposit-block">' +
             '<h1 class="deposit-tag">Đặt cọc: </h1>' +
-            '<p class="deposit-value">' + item.deposit + ' VND</p>' +
+            '<p class="deposit-value">' + depositCurrencyFormat + ' VND</p>' +
             '</span>' +
             '<span class="phone-block">' +
             '<h1 class="phone-tag">Phone number:</h1>' +
