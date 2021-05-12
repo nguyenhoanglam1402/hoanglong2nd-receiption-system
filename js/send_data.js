@@ -33,6 +33,7 @@ $(document).ready(function () {
                     phone: phoneNumber
                 },
                 success: function (response) {
+                    $('#send-button').html('Gửi thành công');
                     if(confirm(response+"\nBạn có muốn làm mới biên lai không ?") == true){
                         location.reload();
                     } else{
@@ -40,11 +41,12 @@ $(document).ready(function () {
                     }
                 },
                 error: function (log) {
+                    $('#send-button').html('Gửi thất bại');
                     console.log('Unexpected error:\n >' + log.status);
                 }
             });
-        $("#send-button").attr("disabled", true);
-        $('#send-button').html('Đang gửi...');
+        $("#send-button").attr("disabled", false);
+        $('#send-button').html('Gửi biên lai');
         }
     });
 
