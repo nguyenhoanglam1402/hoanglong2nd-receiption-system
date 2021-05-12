@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <title>Hoang Long II Kit</title>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="shortcut icon" href="./images/image_for_page/download.png" type="image/png" sizes="96x96">
@@ -91,7 +93,6 @@
         © 2020 Bản quyền thuộc:
         <a class="text-white" href="https://https://www.facebook.com/lamnh.gcd/about">Nguyễn Hoàng Lâm</a>
       </div>
-      
       <!-- Copyright -->
 </footer>
 </html>

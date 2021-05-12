@@ -9,8 +9,8 @@ $(document).ready(function () {
     var phoneNumber;
     
     $('#send-button').click(function (e) {
-        $("#btnSubmit").attr("disabled", true);
-        $('#send-button').val('Đang gửi...');
+        $("#send-button").attr("disabled", true);
+        $('#send-button').html('Đang gửi...');
         customerName = $('#customer-name-input').val();
         typeOfService = $('#type-service-selector').val();
         description = $('#description-input').val();
@@ -43,8 +43,8 @@ $(document).ready(function () {
                     console.log('Unexpected error:\n >' + log.status);
                 }
             });
-            $("#btnSubmit").attr("disabled", false);
-            $("#btnSubmit").val("Gửi biên lai");
+        $("#send-button").attr("disabled", true);
+        $('#send-button').html('Đang gửi...');
         }
     });
 
