@@ -24,6 +24,7 @@ $(document).ready(function () {
             $('.listCustomer').empty();
             listOfReceiptions.forEach(receiption => {
                 remainingDateForPresentation = Math.round(calculateDifferentDay(receiption.dueDate));
+                var depositCurrencyFormat = new Intl.NumberFormat({ style: 'currency', currency: 'JPY' }).format(receiption.deposit);
                 $('.listCustomer').append(
                     '<li class="customer-item">'+
                     '<div class="customer-item-card shadow-sm dark-tab shadow-sm">'+
@@ -32,7 +33,7 @@ $(document).ready(function () {
                             '<span class="created_date">Ngày tạo: '+ receiption.createdDate+'</span>'+
                         '</div>'+
                         '<p class="customer-description">Dịch vụ đã đặt: <span class="services-tag">'+ receiption.typeOfService+'</span></p>'+
-                        '<p class="customer-description">Số tiền đặt cọc: <b>'+ receiption.deposit+' VNĐ</b></p>'+
+                        '<p class="customer-description">Số tiền đặt cọc: <b>'+ depositCurrencyFormat+' VNĐ</b></p>'+
                         '<div class="notification" id="'+receiption.rid+'">'+
                           '<span class="warning-notification ">'+ remainingDateForPresentation +' NGÀY</span>'+
                           '<span class="due-tag">Ngày hẹn: <span class="date">'+receiption.dueDate+'</span></span>'+
