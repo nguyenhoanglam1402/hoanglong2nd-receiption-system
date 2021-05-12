@@ -35,10 +35,6 @@ $(document).ready(function () {
         $(".column-container").remove();
     }
 
-    function rebuildDisplay() {
-        $(".page-content").append('<div class="column-container"></div>');
-    }
-
     function cleanColumn() {
         $(".marrie-service").empty();
         $(".photographer-service").empty();
