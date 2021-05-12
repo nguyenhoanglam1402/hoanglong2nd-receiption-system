@@ -9,7 +9,7 @@ $(document).ready(function () {
     var phoneNumber;
     
     $('#send-button').click(function (e) {
-        $('#send-button').prop('disabled', true);
+        $("#btnSubmit").attr("disabled", true);
         $('#send-button').val('Đang gửi...');
         customerName = $('#customer-name-input').val();
         typeOfService = $('#type-service-selector').val();
@@ -33,18 +33,18 @@ $(document).ready(function () {
                     phone: phoneNumber
                 },
                 success: function (response) {
-                    $('#send-button').prop('disabled', false);
-                    $('#send-button').val('Gửi biên lai');
                     if(confirm(response+"\nBạn có muốn làm mới biên lai không ?") == true){
                         location.reload();
                     } else{
                         $('#cancel-button').text('Trở về');
                     }
                 },
-                error: function(log){
+                error: function (log) {
                     console.log('Unexpected error:\n >' + log.status);
                 }
             });
+            $("#btnSubmit").attr("disabled", false);
+            $("#btnSubmit").val("Gửi biên lai");
         }
     });
 
