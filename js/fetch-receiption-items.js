@@ -18,12 +18,12 @@ $(document).ready(function () {
         });
     }, 1000);
 
-    async function displayReceiptionItem(response) {
+    function displayReceiptionItem(response) {
         if ((listOfReceiptionsItems.length != response.length) && response.length !=0) {
             cleanColumn();
             listOfReceiptionsItems = response;
             listOfReceiptionsItems.forEach(item => {
-                await createTaskBlock(item);
+                createTaskBlock(item);
                 addEffectAndColor(item)
             });
         }
