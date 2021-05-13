@@ -13,7 +13,8 @@ $(document).ready(function () {
             timeout -= 1;
             console.log(timeout);
             if (timeout < 0) {
-                clearInterval(countDown).then(updateReceiption());
+                clearInterval(countDown);
+                updateReceiption();
             } else if (timeout <= 3 && timeout >= 0) {
                 $(notificationMessage).html("Đưa vào kho lưu trữ sau " + timeout + " giây" + '<i class="fas fa-cloud-upload-alt"></i>');
             }
