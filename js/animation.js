@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".done-button").click(function () {
+    $(".task-container ").on("click", ".task-tab .done-button", function () {
         var taskTab = $(this).parents(".task-tab");
         var notificationLine = $(this).closest("div");
         var notificationMessage = notificationLine.find(".due-date");
@@ -35,3 +35,4 @@ $(document).ready(function () {
         });        
     });
 });
+
