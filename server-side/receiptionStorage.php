@@ -5,6 +5,17 @@ $function = $_POST['function'];
 $status = $_POST['updatedStatus'];
 $receiptionId = $_POST['receiptionID'];
 
+switch ($function) {
+	case'setStatus':
+		SetStatus($status);
+		break;
+	case'deleteItem':
+		DeleteItem();
+		break;
+	default:
+		echo '<script>alert("Nản")</script>';
+}
+
 function SetStatus($updatedStatus) {
     $query = "UPDATE public.receiption_product_service
 	SET is_done = $updatedStatus
@@ -16,11 +27,4 @@ function DeleteItem() {
 	//Coming soon
 }
 
-switch ($function) {
-	case'setStatus':
-		SetStatus($status);
-		break;
-	case'deleteItem':
-		DeleteItem();
-		break;
-}
+?>
