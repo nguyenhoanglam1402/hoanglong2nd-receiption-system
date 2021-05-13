@@ -22,6 +22,10 @@ $(document).ready(function () {
         if ((listOfReceiptionsItems.length != response.length) && response.length !=0) {
             cleanColumn();
             listOfReceiptionsItems = response;
+            amountOfMarriedService = 0;
+            amountOfItemsService = 0;
+            amountOfPhotographerService = 0;
+            amountOfClothesService = 0;
             listOfReceiptionsItems.forEach(item => {
                 createTaskBlock(item);
                 addEffectAndColor(item)
