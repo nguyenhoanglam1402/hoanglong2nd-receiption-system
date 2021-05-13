@@ -1,6 +1,9 @@
 $(document).ready(function () {
     var listOfReceiptionsItems = [];
-
+    var amountOfMarriedService = 0;
+    var amountOfItemsService = 0;
+    var amountOfPhotographerService = 0;
+    var amountOfClothesService = 0;
     setInterval(() => {
         $.ajax({
             type: "POST",
@@ -26,9 +29,15 @@ $(document).ready(function () {
         }
         else if (response.length == 0) {
             cleanDisplay();
-            rebuildDisplay();
+            buildNotification();
         }
         
+    }
+
+    function buildNotification() {
+        $("main").append(
+
+        );
     }
 
     function cleanDisplay() {
@@ -49,15 +58,23 @@ $(document).ready(function () {
         switch (item.typeOfService) {
             case "Làm đám cưới":
                 index = 0;
+                amountOfMarriedService += 1;
+                $('.amount-marrie-service').html(amountOfMarriedService);
                 break;
             case "Chụp ảnh cưới":
                 index = 1;
+                amountOfPhotographerService += 1;
+                $('.amount-photographer-service').html(amountOfPhotographerService);
                 break;
             case "Đặt mâm quả cưới":
                 index = 2;
+                amountOfItemsService += 1;
+                $('.amount-item-service').html(amountOfItemsService);
                 break;
             case "Áo cưới/ trang phục":
                 index = 3;
+                amountOfClothesService += 1;
+                $('.amount-clothes-service').html(amountOfClothesService);
                 break;
         }
         $("." + title[index]).append(
@@ -90,6 +107,8 @@ $(document).ready(function () {
           '</div>' +
         '</div>' 
         );
+
+        $("").html(htmlString);
     }
 
     function addEffectAndColor(item) {

@@ -1,4 +1,8 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: -webkit-fill-available;
   background: #1e272e;
 }
 
@@ -136,6 +140,7 @@ i {
 
 .page-content {
   width: -webkit-fill-available;
+  flex: 1;
 }
 
 .services-tag {
