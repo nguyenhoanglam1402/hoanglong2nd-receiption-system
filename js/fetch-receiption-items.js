@@ -70,7 +70,7 @@ $(document).ready(function () {
                 '<p class="created-date">Ngày tạo: ' + item.createdDate + '</p>'+
               '</div>'+
               '<p class="description-tag">Mô tả chi tiết</p>' +
-              '<p class="description-content">'+ item.desciption +'</p>' +
+              '<p class="description-content">'+ item.description +'</p>' +
               '<span class="deposit-block">' +
                 '<h1 class="deposit-tag">Đặt cọc: </h1>' +
                 '<p class="deposit-value">'+ depositCurrencyFormat +'VND</p>' +
