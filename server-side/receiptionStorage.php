@@ -1,7 +1,7 @@
 <?php
 string $function = $_POST['function'];
-string $status = $_POST['updatedStatus'];
-string $receiptionId = $_POST['receiptionID'];
+$status = $_POST['updatedStatus'];
+$receiptionId = $_POST['receiptionID'];
 
 function SetStatus($updatedStatus) {
     $query = "UPDATE public.receiption_product_service
