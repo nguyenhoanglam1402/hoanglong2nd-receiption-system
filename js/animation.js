@@ -24,7 +24,7 @@ $(document).ready(function () {
             data: {
                 function: 'setStatus',
                 updatedStatus: true,
-                receiptionID: taskTab,
+                receiptionID: taskID
             },
             success: function (response) {
                 $(taskTab).remove();

@@ -73,7 +73,7 @@ $(document).ready(function () {
               '<p class="description-content">'+ item.desciption +'</p>' +
               '<span class="deposit-block">' +
                 '<h1 class="deposit-tag">Đặt cọc: </h1>' +
-                '<p class="deposit-value">'+ item.deposit +'VND</p>' +
+                '<p class="deposit-value">'+ depositCurrencyFormat +'VND</p>' +
               '</span>' +
               '<span class="phone-block">' +
                 '<h1 class="phone-tag">Phone number:</h1>' +
