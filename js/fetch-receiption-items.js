@@ -59,22 +59,22 @@ $(document).ready(function () {
             case "Làm đám cưới":
                 index = 0;
                 amountOfMarriedService += 1;
-                $('.amount-marrie-service').html(amountOfMarriedService);
+                $('#amount-marrie-service').html(amountOfMarriedService);
                 break;
             case "Chụp ảnh cưới":
                 index = 1;
                 amountOfPhotographerService += 1;
-                $('.amount-photographer-service').html(amountOfPhotographerService);
+                $('#amount-photographer-service').html(amountOfPhotographerService);
                 break;
             case "Đặt mâm quả cưới":
                 index = 2;
                 amountOfItemsService += 1;
-                $('.amount-item-service').html(amountOfItemsService);
+                $('#amount-item-service').html(amountOfItemsService);
                 break;
             case "Áo cưới/ trang phục":
                 index = 3;
                 amountOfClothesService += 1;
-                $('.amount-clothes-service').html(amountOfClothesService);
+                $('#amount-clothes-service').html(amountOfClothesService);
                 break;
         }
         $("." + title[index]).append(
