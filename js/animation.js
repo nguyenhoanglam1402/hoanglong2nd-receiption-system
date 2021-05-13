@@ -31,6 +31,7 @@ $(document).ready(function () {
             },
             error: function (response) {
                 $(this).html("Thử lại");
+                console.log(response.status);
             },
         });        
     });
