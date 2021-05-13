@@ -34,6 +34,7 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     $('#send-button').html('Gửi biên lai');
+                    $("#send-button").attr("disabled", false);
                     if(confirm(response+"\nBạn có muốn làm mới biên lai không ?") == true){
                         location.reload();
                     } else{
