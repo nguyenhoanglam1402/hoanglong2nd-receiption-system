@@ -18,22 +18,26 @@ $(document).ready(function () {
                 $(notificationMessage).html("Đưa vào kho lưu trữ sau " + timeout + " giây" + '<i class="fas fa-cloud-upload-alt"></i>');
             }
         }, 1000);
-        $.ajax({
-            type: "POST",
-            url: "./server-side/receiptionStorage.php",
-            data: {
-                function: 'setStatus',
-                updatedStatus: true,
-                receiptionID: taskID
-            },
-            success: function (response) {
-                $(taskTab).remove();
-            },
-            error: function (response) {
-                $(this).html("Thử lại");
-                console.log(response.status);
-            },
-        });        
+
+        function updateReceiption() {
+            $.ajax({
+                type: "POST",
+                url: "./server-side/receiptionStorage.php",
+                data: {
+                    function: 'setStatus',
+                    updatedStatus: true,
+                    receiptionID: taskID
+                },
+                success: function (response) {
+                    $(taskTab).remove();
+                },
+                error: function (response) {
+                    $(this).html("Thử lại");
+                    console.log(response.status);
+                },
+            });  
+        }
+      
     });
 });
 
