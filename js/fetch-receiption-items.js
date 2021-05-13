@@ -61,30 +61,34 @@ $(document).ready(function () {
                 break;
         }
         $("." + title[index]).append(
-            '<div class="task-tab" id="' + item.rid + '">' +
-            '<div class="light-line"></div>' +
-            '<div class="content-container">' +
+        '<div class="task-tab" id="'+ item.rid +'">' +
+          '<div class="light-line linear-blue"></div>'+
+          '<div class="content-container">' +
             '<div class="tab-content">' +
-            '<div class="tab-header">' +
-            '<h1 class="customer-name">' + item.name + '</h1>' +
-            '<p class="created-date">Ngày tạo: ' + item.createdDate + '</p>' +
-            '</div>' +
-            '<p class="description-tag">Mô tả chi tiết</p>' +
-            '<p class="description-content">' + item.description + '</p>' +
-            '<span class="deposit-block">' +
-            '<h1 class="deposit-tag">Đặt cọc: </h1>' +
-            '<p class="deposit-value">' + depositCurrencyFormat + ' VND</p>' +
-            '</span>' +
-            '<span class="phone-block">' +
-            '<h1 class="phone-tag">Phone number:</h1>' +
-            '<p class="phone-number">' + item.phoneNumber + '</p>' +
-            '</span>' +
+              '<div class="tab-header">' +
+                '<h1 class="customer-name">' + item.name + '</h1>'+
+                '<p class="created-date">Ngày tạo: ' + item.createdDate + '</p>'+
+              '</div>'+
+              '<p class="description-tag">Mô tả chi tiết</p>' +
+              '<p class="description-content">'+ item.desciption +'</p>' +
+              '<span class="deposit-block">' +
+                '<h1 class="deposit-tag">Đặt cọc: </h1>' +
+                '<p class="deposit-value">'+ item.deposit +'VND</p>' +
+              '</span>' +
+              '<span class="phone-block">' +
+                '<h1 class="phone-tag">Phone number:</h1>' +
+                '<p class="phone-number">'+ item.phoneNumber +'</p>' +
+              '</span>' +
             '</div>' +
             '<div class="notification-line">' +
-            '<p class="due-date">Ngày hẹn: ' + item.dueDate + '</p>' +
+              '<button class="done-button">' +
+                '<i class="fas fa-check-circle"></i>'+
+                'Hoàn thành' +
+              '</button>' +
+              '<p class="due-date">Ngày hẹn: '+ item.dueDate +'</p>' +
             '</div>' +
-            '</div>' +
-            '</div>'
+          '</div>' +
+        '</div>' 
         );
     }
 
