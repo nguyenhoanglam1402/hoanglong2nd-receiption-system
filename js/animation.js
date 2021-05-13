@@ -31,6 +31,7 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     $(taskTab).remove();
+                    console.log(response);
                 },
                 error: function (response) {
                     $(this).html("Thử lại");
