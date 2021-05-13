@@ -205,7 +205,7 @@ body {
 
 .notification-line {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 5px 10px;
   margin: 0px 3px 5px 3px;
 }
@@ -213,7 +213,36 @@ body {
 .due-date {
   margin: 0;
   width: fit-content;
-  float: inline-end;
   color: #abaeb0;
   font-size: 14px;
+  place-self: center;
+  height: fit-content;
+}
+.done-button {
+  place-self: center;
+  color: rgba(171, 174, 176, 0.58);
+  font-size: 16px;
+}
+
+.done-button {
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.done-button:hover {
+  color: #6bc950;
+}
+
+.done-button:focus {
+  outline: none;
+}
+
+.fa-clipboard-check,
+.fa-dollar-sign,
+.fa-cloud-upload-alt,
+.fa-cloud-upload-alt,
+.fa-id-badge::before {
+  font-size: 16px;
+  margin-left: 5px;
 }

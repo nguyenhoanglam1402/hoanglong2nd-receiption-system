@@ -72,7 +72,7 @@ $(document).ready(function () {
             alert('Tiền đặt cọc không được dưới 0 đồng hoặc bỏ trống');
         } else if (dateTime == '' || dateTime == null){
             alert('Vui lòng định trước ngày hẹn của bạn với khách hàng !');
-        } else if (phoneNumber == 0 || phoneNumber == null){
+        } else if (phoneNumber == 0 || phoneNumber == null || (phoneNumber[11] == null || phoneNumber[10] == null)){
             alert('Vui lòng nhập số điện thoại của khách hàng để thuận tiện cho việc liên lạc!');
         } else{
             isValidated = true;
