@@ -1,12 +1,15 @@
 <?php
-string $function = $_POST['function'];
+require 'connect.php';
+
+$function = $_POST['function'];
 $status = $_POST['updatedStatus'];
 $receiptionId = $_POST['receiptionID'];
 
 function SetStatus($updatedStatus) {
     $query = "UPDATE public.receiption_product_service
 	SET is_done = $updatedStatus
-	WHERE rid = $receiptionId;"
+	WHERE rid = $receiptionId";
+	pg_query($connect, $query);
 }
 
 function DeleteItem() {
