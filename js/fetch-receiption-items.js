@@ -41,8 +41,8 @@ $(document).ready(function () {
 
     function buildNotification() {
         var map = new Map();
-        map.set(0, { urlImage: '/images/asset/QuotesArt/family.png', qouteContent: '"Sometimes, you need to find some peaceful and hopeful inside yourself and your family"' });
-        map.set(1, { urlImage: '/images/asset/QuotesArt/yoga.png', qouteContent: "\"Don't forget your health ! Standup and try with some gymnastics ! Not just you but with your child and family.\""});
+        map.set(0, { urlImage: '/images/asset/QuotesArt/family.png', qouteContent: '"Your tasks have been done ! You need to find some peaceful and hopeful inside yourself and your family"' });
+        map.set(1, { urlImage: '/images/asset/QuotesArt/yoga.png', qouteContent: "\"No tasks remaining ! Don't forget your health ! Standup and try with some gymnastics ! Not just you but with your child and family.\""});
         map.set(2, { urlImage: '/images/asset/QuotesArt/take_a_nap.png', qouteContent: '"Congratulation ! You deserve a nap and a smile ! Take it !"' });
 
         var randomeValue = Math.floor(Math.random() * map.size);
