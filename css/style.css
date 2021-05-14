@@ -140,8 +140,8 @@ i {
 
 .page-content {
   width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  margin-bottom: 20px;
+  flex: 1;
+  margin-bottom: 25px;
 }
 
 .services-tag {

@@ -40,15 +40,23 @@ $(document).ready(function () {
     }
 
     function buildNotification() {
+        var map = new Map();
+        map.set(0, { urlImage: '/images/asset/QuotesArt/family.png', qouteContent: '"Sometimes, you need to find some peaceful and hopeful inside yourself and your family"' });
+        map.set(1, { urlImage: '/images/asset/QuotesArt/yoga.png', qouteContent: "\"Don't forget your health ! Standup and try with some gymnastics ! Not just you but with your child and family.\""});
+        map.set(2, { urlImage: '/images/asset/QuotesArt/take_a_nap.png', qouteContent: '"Congratulation ! You deserve a nap and a smile ! Take it !"' });
+
+        var randomeValue = Math.floor(Math.random * map.size);
+
         $("main").append(
             '<link rel="stylesheet" href="/css/quotes.css">'+
             '<div class="qoutes-container">'+
                 '<div class="quotes-block">' +
-                    '<img class="qoutes-image" src="images/asset/recovery.png" alt="" srcset="">' +
-                    '<p class="quote-content">"You have done all of task. Lets take some time for yourself"</p>'+
+                    '<img class="qoutes-image" src="'+ map.get(randomeValue)['urlImage'] +'" alt="" srcset="">' +
+                    '<p class="quote-content">"'+ map.get(randomeValue)['qouteContent'] +'"</p>'+
                 '</div>' +
             '</div>'
         );
+
     }
 
     function cleanDisplay() {
