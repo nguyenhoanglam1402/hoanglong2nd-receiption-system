@@ -140,6 +140,7 @@ i {
 
 .page-content {
   width: -webkit-fill-available;
+  margin-bottom: 20px;
   flex: 1;
 }
 

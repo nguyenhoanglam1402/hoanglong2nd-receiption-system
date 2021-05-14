@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "quite_magicalregular";
+  src: url("/font/webfontkit-20210514-010107/quitemagicalregular-8va2-webfont.woff2")
+      format("woff2"),
+    url("/font/webfontkit-20210514-010107/quitemagicalregular-8va2-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.qoutes-container {
+  display: flex;
+  justify-content: center;
+}
+
+.quotes-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.quote-content {
+  font-family: "quite_magicalregular";
+  font-size: 36px;
+  text-align: center;
+  width: -webkit-fill-available;
+}

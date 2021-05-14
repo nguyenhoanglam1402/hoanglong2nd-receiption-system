@@ -40,7 +40,13 @@ $(document).ready(function () {
 
     function buildNotification() {
         $("main").append(
-
+            '<link rel="stylesheet" href="/css/quotes.css">'+
+            '<div class="qoutes-container">'+
+                '<div class="quotes-block">' +
+                    '<img src="images/asset/recovery.png" alt="" srcset="" height="500px" width="670px">' +
+                    '<p class="quote-content">"You have done all of task. Lets take some time for yourself"</p>'+
+                '</div>' +
+            '</div>'
         );
     }
 
