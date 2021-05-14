@@ -10,6 +10,8 @@
 
 .qoutes-container {
   display: flex;
+  width: -webkit-fill-available;
+  height: 100%;
 }
 
 .quotes-block {

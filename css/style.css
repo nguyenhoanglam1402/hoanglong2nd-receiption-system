@@ -139,9 +139,8 @@ i {
 }
 
 .page-content {
-  display: flex;
-  justify-content: center;
   width: -webkit-fill-available;
+  height: -webkit-fill-available;
   margin-bottom: 20px;
 }
 
