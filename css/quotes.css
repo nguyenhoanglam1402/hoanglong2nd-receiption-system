@@ -8,6 +8,12 @@
   font-style: normal;
 }
 
+.qoutes-image {
+  height: 500px;
+  width: 670px;
+  object-fit: cover;
+}
+
 .qoutes-container {
   display: flex;
   justify-content: center;
