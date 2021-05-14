@@ -4,7 +4,7 @@ $(document).ready(function () {
     var amountOfItemsService = 0;
     var amountOfPhotographerService = 0;
     var amountOfClothesService = 0;
-    setInterval(() => {
+    var refreshReceiption = setInterval(() => {
         $.ajax({
             type: "POST",
             url: "./server-side/getReceiptions.php",
@@ -34,6 +34,7 @@ $(document).ready(function () {
         else if (response.length == 0) {
             cleanDisplay();
             buildNotification();
+            clearInterval(refreshReceiption);
         }
         
     }
