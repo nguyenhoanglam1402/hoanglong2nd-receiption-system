@@ -8,6 +8,10 @@
   font-style: normal;
 }
 
+.qoutes-container {
+  display: flex;
+}
+
 .quotes-block {
   display: flex;
   flex-direction: column;
@@ -27,10 +31,10 @@
     height: auto;
     width: 30%;
     margin: auto;
-    padding-top: 70px;
   }
   .quote-content {
     font-size: 36px;
+    margin-top: 10px;
   }
 }
 
@@ -39,9 +43,9 @@
     height: auto;
     width: 70%;
     margin: auto;
-    padding-top: 100px;
   }
   .quote-content {
     font-size: 26px;
+    margin-top: 10px;
   }
 }

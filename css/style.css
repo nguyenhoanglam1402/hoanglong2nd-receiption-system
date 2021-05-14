@@ -139,9 +139,10 @@ i {
 }
 
 .page-content {
+  display: flex;
+  justify-content: center;
   width: -webkit-fill-available;
   margin-bottom: 20px;
-  flex: 1;
 }
 
 .services-tag {

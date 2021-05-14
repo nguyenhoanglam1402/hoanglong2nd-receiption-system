@@ -63,6 +63,13 @@
     </nav>
     </div>
     <main class="page-content">
+      <link rel="stylesheet" href="css/quotes.css">
+      <div class="qoutes-container">
+        <div class="quotes-block">
+          <img class="qoutes-image" src="images/asset/recovery.png" alt="" srcset="">
+          <p class="quote-content">"You have done all of task. Let's take some time for yourself"</p>
+        </div>
+      </div>
     </main>
   </body>
   <script src="js/navigationbar_click.js"></script>
