@@ -22,19 +22,19 @@
   width: -webkit-fill-available;
 }
 
-@media (min-width: 411px) {
+@media (min-width: 500px) {
   .qoutes-image {
     height: auto;
     width: 30%;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 70px;
   }
   .quote-content {
     font-size: 36px;
   }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 500px) {
   .qoutes-image {
     height: auto;
     width: 70%;
