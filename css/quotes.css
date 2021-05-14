@@ -8,12 +8,6 @@
   font-style: normal;
 }
 
-.qoutes-image {
-  height: auto;
-  width: 40%;
-  margin: auto;
-}
-
 .quotes-block {
   display: flex;
   flex-direction: column;
@@ -23,8 +17,31 @@
 
 .quote-content {
   font-family: "quite_magicalregular";
-  font-size: 36px;
   text-align: center;
   color: #b3b3b3;
   width: -webkit-fill-available;
+}
+
+@media (min-width: 411px) {
+  .qoutes-image {
+    height: auto;
+    width: 30%;
+    margin: auto;
+    padding-top: 100px;
+  }
+  .quote-content {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 411px) {
+  .qoutes-image {
+    height: auto;
+    width: 70%;
+    margin: auto;
+    padding-top: 100px;
+  }
+  .quote-content {
+    font-size: 36px;
+  }
 }

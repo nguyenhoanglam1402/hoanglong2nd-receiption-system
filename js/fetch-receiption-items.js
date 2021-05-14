@@ -32,9 +32,9 @@ $(document).ready(function () {
             });
         }
         else if (response.length == 0) {
+            clearInterval(refreshReceiption);
             cleanDisplay();
             buildNotification();
-            clearInterval(refreshReceiption);
         }
         
     }
