@@ -28,6 +28,17 @@
   width: -webkit-fill-available;
 }
 
+.intro-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+
 @media (min-width: 500px) {
   .qoutes-image {
     height: auto;

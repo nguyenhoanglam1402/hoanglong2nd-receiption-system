@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "pacificoregular";
+  src: url("/font/webfontkit-20210514-145656/pacifico-regular-webfont.woff2")
+      format("woff2"),
+    url("/font/webfontkit-20210514-145656/pacifico-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -326,8 +336,78 @@ a {
   padding-right: 10px;
 }
 
+.intro-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-header {
+  font-family: "pacificoregular";
+  color: #abaeb0;
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+
+.video-frame {
+  width: 100%;
+}
+
+.video-frame-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: Gotham Pro, Proxima Nova, arial, serif;
+  font-weight: bold;
+  color: #abaeb0;
+}
+
+.para-content {
+  font-family: Gotham Pro, Proxima Nova, arial, serif;
+  color: #abaeb0;
+  text-align: justify;
+}
+
+.high-line-orange {
+  color: #ff7800;
+  font-weight: bold;
+}
+
+.high-line-blue {
+  color: #04a9f4;
+  font-weight: bold;
+}
+
 footer {
   clear: both;
+}
+
+.list-of-things {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.list-item {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.icon-list {
+  margin-right: 10px;
+}
+.illustration-image {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 800px) {
@@ -359,6 +439,38 @@ footer {
   #detail-block {
     display: flex;
     justify-content: space-between;
+  }
+  .video-frame-container {
+    width: 80%;
+  }
+  .body-header {
+    font-size: 26px;
+  }
+  .page-content {
+    font-size: 16px;
+  }
+  .para-content {
+    padding: 0px 20px;
+  }
+  .paragraph {
+    padding: 10px 30px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .content-art-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .illustration-block {
+    width: 40%;
+  }
+  .content-illustration-block {
+    flex: 1;
+  }
+  .list-of-things {
+    padding: 50px 20px;
   }
 }
 @media (max-width: 800px) {
@@ -392,5 +504,33 @@ footer {
   }
   #detail-block {
     display: block;
+  }
+
+  .video-frame-container {
+    width: 90%;
+  }
+  .body-header {
+    font-size: 20px;
+  }
+  .page-content {
+    font-size: 14px;
+  }
+  .para-content {
+    padding: 0px;
+  }
+  .paragraph {
+    padding: 5px, 5px;
+  }
+  .heading {
+    font-size: 16px;
+  }
+  .content-art-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .list-of-things {
+    padding: 20px 20px;
+    margin: 0;
   }
 }
